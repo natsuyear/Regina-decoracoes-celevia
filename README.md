@@ -13,11 +13,7 @@ Case de portfólio de **Nathália Nishimuta** (UX/UI e front-end).
 ## Tecnologias
 HTML, CSS e JavaScript puros. É um site estático, sem build.
 
-## Como publicar (GitHub Pages)
-1. Suba todos os arquivos na raiz do repositório.
-2. Em **Settings → Pages**, escolha **Deploy from a branch**, a branch `main` e a pasta `/ (root)`.
 
 ## Observações
 - As fotos são ilustrativas e serão trocadas pelas fotos reais da Regina.
 - Os preços e os dados de clientes são fictícios.
-- Na versão publicada, o e-mail do contrato é aberto pelo `mailto`. O envio automático depende de um serviço externo, como o EmailJS.
