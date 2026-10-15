@@ -1,0 +1,1293 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Regina Decorações — Festas em Santo André e Grande ABC</title>
+    <link rel="icon" id="fav" type="image/png" href="favicon-celevia.png" />
+    <link rel="apple-touch-icon" id="fav-apple" href="favicon-celevia.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap"
+    />
+    <style>
+      body {
+        --verde: #1f603b;
+        --verde-2: #3c6a42;
+        --verde-3: #678f71;
+        --salvia: #bec5a8;
+        --creme: #e6e7d6;
+        --fundo: #fbfaf5;
+        --ouro: #a6a65e;
+        --tinta: #1b2a1f;
+        --tinta-2: #4a5a4d;
+        --branco: #fff;
+        --r: 14px;
+        --serif: "Cormorant Garamond", Georgia, serif;
+        --sans: "Lato", system-ui, sans-serif;
+      }
+      * { box-sizing: border-box; }
+      html { -webkit-text-size-adjust: 100%; }
+      body {
+        margin: 0;
+        background: var(--fundo);
+        color: var(--tinta);
+        font: 400 16px/1.6 var(--sans);
+        -webkit-font-smoothing: antialiased;
+      }
+      img { max-width: 100%; display: block; }
+      h1, h2, h3, h4 { margin: 0; font-family: var(--serif); font-weight: 600; line-height: 1.2; color: var(--verde); letter-spacing: 0.01em; }
+      h1 { font-size: clamp(28px, 5vw, 46px); }
+      h2 { font-size: clamp(22px, 3.4vw, 30px); }
+      h3 { font-size: 19px; }
+      p { margin: 0; }
+      a { color: var(--verde); }
+      :focus-visible { outline: 3px solid var(--ouro); outline-offset: 2px; border-radius: 4px; }
+      .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+      .eyebrow { font: 700 12px/1.4 var(--sans); letter-spacing: 0.18em; text-transform: uppercase; color: var(--verde-2); }
+      .muted { color: var(--tinta-2); }
+      .small { font-size: 14px; }
+      .rule { height: 1px; background: var(--ouro); opacity: 0.55; border: 0; margin: 0; }
+
+      /* header */
+      header.site { position: sticky; top: 0; z-index: 40; background: color-mix(in srgb, var(--fundo) 95%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--ouro); }
+      .bar { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 10px 20px; max-width: 1120px; margin: 0 auto; }
+      .bar img { height: 52px; width: auto; }
+      nav.tabs { display: flex; gap: 4px; flex-wrap: wrap; margin-left: auto; }
+      nav.tabs button {
+        font: 400 13px/1 var(--serif); letter-spacing: 0.08em; text-transform: uppercase;
+        min-height: 44px; padding: 0 14px; border: 1px solid transparent; border-radius: 999px;
+        background: none; color: var(--verde-2); cursor: pointer;
+      }
+      nav.tabs button:hover { background: var(--creme); }
+      nav.tabs button[aria-selected="true"] { background: var(--verde); color: var(--branco); }
+      nav.tabs .is-featured { border-color: var(--ouro); color: var(--verde); background: #f4f2e4; }
+      nav.tabs .is-featured[aria-selected="true"] { background: var(--verde); color: var(--branco); border-color: var(--verde); }
+
+      main { padding-bottom: 72px; }
+      .panel { display: none; }
+      .panel.is-on { display: block; }
+      section.blk { padding: 44px 0; }
+      .blk + .blk { border-top: 1px solid rgba(166, 166, 94, 0.5); }
+      .lead { font-size: 18px; color: var(--tinta-2); max-width: 60ch; margin-top: 10px; }
+
+      /* buttons */
+      .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; padding: 0 20px; border-radius: 999px; border: 1px solid var(--verde); background: var(--verde); color: var(--branco); font: 700 14px/1 var(--sans); letter-spacing: 0.04em; text-decoration: none; cursor: pointer; }
+      .btn:hover { background: var(--verde-2); border-color: var(--verde-2); }
+      .btn--ghost { background: none; color: var(--verde); }
+      .btn--ghost:hover { background: var(--creme); }
+      .btn--gold { background: var(--ouro); border-color: var(--ouro); color: #1b2a1f; }
+      .btns { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+
+      /* hero */
+      /* (hero: see x-hero below) */
+
+      /* trust + grids */
+      .trio { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+      .card { background: var(--branco); border: 1px solid var(--creme); border-radius: var(--r); padding: 20px; }
+      .card--creme { background: var(--creme); border-color: var(--salvia); }
+      .num { font-family: var(--serif); font-size: 15px; color: var(--ouro); letter-spacing: 0.1em; }
+      .steps { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+      /* tags / chips */
+      .tag { display: inline-flex; align-items: center; gap: 6px; font: 700 12px/1 var(--sans); letter-spacing: 0.04em; padding: 7px 11px; border-radius: 999px; background: var(--creme); color: #2c3b2e; border: 1px solid var(--salvia); }
+      .tag i { width: 9px; height: 9px; border-radius: 50%; display: block; }
+      .filters { display: flex; gap: 10px; flex-wrap: wrap; margin: 18px 0 24px; }
+      .filters button { min-height: 44px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--salvia); background: var(--branco); color: #2c3b2e; font: 700 13px/1 var(--sans); cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+      .filters button[aria-pressed="true"] { background: var(--verde); border-color: var(--verde); color: var(--branco); }
+      .filters button i { width: 10px; height: 10px; border-radius: 50%; display: block; }
+      .sw-verde { background: linear-gradient(135deg, #1f603b 50%, #a6a65e 50%); }
+      .sw-branco { background: linear-gradient(135deg, #fff 50%, #e6e7d6 50%); border: 1px solid var(--salvia); }
+      .sw-rosa { background: linear-gradient(135deg, #e8b4ad 50%, #b05c3c 50%); }
+      .sw-color { background: conic-gradient(#e2574c, #e9b949, #4b9b6e, #4a7ab8, #e2574c); }
+      .sw-lilas { background: linear-gradient(135deg, #b9a8d6 50%, #6f8fc4 50%); }
+
+      /* festa cards */
+      .festas { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+      .festa { text-align: left; padding: 0; border: 1px solid var(--creme); background: var(--branco); border-radius: 18px; overflow: hidden; cursor: pointer; font: inherit; color: inherit; display: flex; flex-direction: column; }
+      .festa:hover { border-color: var(--ouro); }
+      .festa img { width: 100%; height: 200px; object-fit: cover; }
+      .festa__body { padding: 16px 16px 18px; display: grid; gap: 10px; }
+      .festa__tags { display: flex; gap: 6px; flex-wrap: wrap; }
+      .festa__t { font: 600 19px/1.2 var(--serif); color: var(--verde); }
+      .festa .go { font: 700 13px/1 var(--sans); color: var(--verde); }
+      .is-hidden { display: none !important; }
+
+      /* galeria */
+      .gal { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+      .gal button { padding: 0; border: 1px solid var(--creme); border-radius: 16px; overflow: hidden; background: none; cursor: pointer; position: relative; }
+      .gal img { width: 100%; height: 230px; object-fit: cover; }
+      .gal span { position: absolute; left: 10px; bottom: 10px; background: rgba(31, 96, 59, 0.9); color: #fff; font: 700 12px/1 var(--sans); padding: 7px 10px; border-radius: 999px; }
+      dialog.lb { border: 0; padding: 0; background: none; max-width: 94vw; }
+      dialog.lb::backdrop { background: rgba(27, 42, 31, 0.84); }
+      dialog.lb img { border-radius: 16px; max-height: 76vh; width: auto; }
+      dialog.lb .lb__bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; color: #fff; margin-top: 12px; font-size: 14px; }
+      dialog.lb .btn { background: none; border-color: #fff; color: #fff; }
+
+      /* forms */
+      form.f { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); align-items: end; }
+      .field { display: grid; gap: 6px; }
+      .field label, .field .lbl { font: 700 13px/1.3 var(--sans); color: var(--verde-2); }
+      input, select, textarea { font: 400 15px/1.4 var(--sans); color: var(--tinta); background: var(--branco); border: 1px solid var(--salvia); border-radius: 10px; padding: 11px 12px; min-height: 46px; width: 100%; }
+      textarea { min-height: 84px; resize: vertical; }
+      input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--ouro); outline-offset: 1px; border-color: var(--verde); }
+      .span2 { grid-column: 1 / -1; }
+      .err { color: #8c2b1e; font: 700 13px/1.4 var(--sans); }
+      .chkrow { display: flex; gap: 10px; align-items: flex-start; }
+      .chkrow input { width: 22px; min-height: 22px; height: 22px; margin-top: 2px; accent-color: var(--verde); }
+
+      /* sobre */
+      .sobre { display: grid; gap: 28px; grid-template-columns: minmax(240px, 340px) minmax(0, 1fr); align-items: center; }
+      .arch { border-radius: 170px 170px 18px 18px; overflow: hidden; border: 1px solid var(--salvia); background: var(--creme); padding: 10px; }
+      .arch img { border-radius: 160px 160px 12px 12px; width: 100%; height: 420px; object-fit: cover; }
+      @media (max-width: 720px) { .sobre { grid-template-columns: 1fr; } .arch img { height: 340px; } }
+
+      /* contrato */
+      .x-ctr { display: grid; gap: clamp(28px, 4vw, 48px); grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); align-items: start; margin-top: 34px; }
+      @media (max-width: 900px) { .x-ctr { grid-template-columns: 1fr; } }
+      .x-ctr .x-formwrap { margin: 0; max-width: none; }
+      .x-ctr__t { font-size: clamp(22px, 2.6vw, 28px); margin-bottom: 18px; }
+      .x-ctr__label { display: inline-block; font: 700 12px/1.3 var(--sans); letter-spacing: .04em; color: var(--verde-2); background: color-mix(in srgb, var(--creme) 80%, transparent); border: 1px solid color-mix(in srgb, var(--ouro) 60%, transparent); border-radius: 999px; padding: 6px 12px; margin-bottom: 14px; }
+      .x-ctr__note { margin-top: 14px; }
+      .x-ctr__doc { display: flex; flex-direction: column; align-items: flex-start; }
+      .x-sheet { display: block; width: 100%; max-width: 460px; aspect-ratio: 1414 / 2000; padding: 0; margin: 0; background: var(--branco); border: 1px solid color-mix(in srgb, var(--salvia) 80%, transparent); border-radius: 3px; box-shadow: 0 1px 2px rgba(31, 60, 40, .08), 0 18px 40px -22px rgba(31, 60, 40, .35); overflow: hidden; cursor: zoom-in; transition: box-shadow .3s, transform .3s; }
+      .x-sheet:hover { box-shadow: 0 1px 2px rgba(31, 60, 40, .1), 0 24px 50px -22px rgba(31, 60, 40, .45); transform: translateY(-2px); }
+      .x-sheet:focus-visible { outline: 2px solid var(--verde); outline-offset: 4px; }
+      .x-sheet img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: top center; }
+      .x-sheetwrap { width: 100%; max-width: 460px; }
+      @media (min-width: 901px) {
+        .x-ctr__doc { align-self: stretch; }
+        .x-sheetwrap { flex: 1 1 0; min-height: 320px; max-width: none; position: relative; contain: size; }
+        .x-sheet { position: absolute; top: 0; left: 0; height: 100%; width: auto; max-width: min(100%, 460px); }
+        .x-sheet:hover { transform: none; }
+      }
+      @media (prefers-reduced-motion: reduce) { .x-sheet { transition: none; } .x-sheet:hover { transform: none; } }
+
+      /* whatsapp float */
+      .wa { position: fixed; right: 16px; bottom: 16px; z-index: 60; width: 60px; height: 60px; border-radius: 50%; background: var(--verde); color: #fff; display: grid; place-items: center; box-shadow: 0 8px 22px rgba(27, 42, 31, 0.3); text-decoration: none; }
+      .wa svg { width: 30px; height: 30px; fill: #fff; }
+
+      footer.site { background: var(--verde); color: #eef0e2; padding: 34px 0 40px; }
+      footer.site a { color: #fff; display: inline-flex; align-items: center; min-height: 44px; }
+      footer.site h3 { color: #fff; font-size: 16px; }
+      .foot { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+      /* celevia: tema */
+      @property --fundo { syntax: "<color>"; inherits: true; initial-value: #fbfaf5; }
+      @property --tinta { syntax: "<color>"; inherits: true; initial-value: #1b2a1f; }
+      @property --tinta-2 { syntax: "<color>"; inherits: true; initial-value: #4a5a4d; }
+      @property --verde { syntax: "<color>"; inherits: true; initial-value: #1f603b; }
+      @property --verde-2 { syntax: "<color>"; inherits: true; initial-value: #3c6a42; }
+      @property --ouro { syntax: "<color>"; inherits: true; initial-value: #a6a65e; }
+      @property --creme { syntax: "<color>"; inherits: true; initial-value: #e6e7d6; }
+      @property --salvia { syntax: "<color>"; inherits: true; initial-value: #bec5a8; }
+      body { transition: --fundo .6s, --tinta .6s, --tinta-2 .6s, --verde .6s, --verde-2 .6s, --ouro .6s, --creme .6s, --salvia .6s; }
+      body.is-celevia {
+        --fundo: #f6f1e8; --tinta: #1c1c1c; --tinta-2: #4d4a44; --verde: #5a6655; --verde-2: #7a6330; --verde-3: #6f7c6a;
+        --ouro: #c8a96a; --creme: #ede5d6; --salvia: #d8cbb0;
+        --serif: "Cormorant Garamond", Georgia, serif; --sans: "Montserrat", system-ui, sans-serif;
+      }
+      .is-celevia h1, .is-celevia h2, .is-celevia h3 { font-weight: 300; letter-spacing: .08em; color: var(--tinta); }
+      .is-celevia h1 { font-size: clamp(34px, 6vw, 58px); }
+      .is-celevia h2 { font-size: clamp(28px, 4vw, 40px); }
+      .is-celevia h3 { font-size: 24px; }
+      .is-celevia .num { color: var(--verde-2); }
+      .is-celevia nav.tabs button { font: 500 12px/1 var(--sans); letter-spacing: .12em; }
+      .logo-c, .cartbtn { display: none; }
+      .is-celevia .logo-r { display: none; }
+      .is-celevia .logo-c { display: flex; align-items: center; gap: 10px; }
+      .logo-c small { font: 500 12px/1.3 var(--sans); letter-spacing: .1em; color: var(--verde-2); }
+      .is-celevia .cartbtn { display: inline-flex; }
+      .cartbtn { position: relative; width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--ouro); background: none; color: var(--tinta); align-items: center; justify-content: center; cursor: pointer; }
+      .cartbtn svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.6; }
+      .cartbtn b { position: absolute; top: -4px; right: -4px; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 999px; background: var(--verde); color: #fff; font: 600 12px/20px var(--sans); }
+      @media (prefers-reduced-motion: reduce) { body, .prog i { transition: none; } dialog.dr[open] { animation: none !important; } }
+
+      /* celevia: conteúdo */
+      .when { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: end; justify-content: center; margin-top: 26px; }
+      .when label { font: 600 13px/1.3 var(--sans); color: var(--tinta); display: grid; gap: 6px; text-align: left; }
+      .when input { width: 210px; }
+      .kit { background: var(--branco); border: 1px solid var(--creme); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column; }
+      .kit img { width: 100%; height: 220px; object-fit: cover; transition: opacity .3s; }
+      .kit.is-na img { opacity: .45; }
+      .kit__b { padding: 16px 16px 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+      .kit ul { margin: 0; padding-left: 18px; font-size: 14px; color: var(--tinta-2); }
+      .kit .btn { margin-top: auto; }
+      .price { font: 500 28px/1 var(--serif); color: var(--tinta); }
+      .price small { font: 400 13px var(--sans); color: var(--tinta-2); }
+      .btn:disabled { opacity: .5; cursor: not-allowed; }
+      .av { display: grid; gap: 10px; margin-top: 16px; }
+      .av > div { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; background: var(--branco); border: 1px solid var(--creme); border-radius: var(--r); padding: 10px 14px; }
+      .qty { display: flex; align-items: center; gap: 8px; }
+      .qty output { min-width: 26px; text-align: center; font-weight: 600; }
+      .x { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--salvia); background: var(--branco); color: var(--tinta); font: 400 20px/1 var(--sans); cursor: pointer; }
+      dialog.dr, dialog.ck { border: 0; padding: 0; background: var(--fundo); color: var(--tinta); }
+      dialog.dr::backdrop, dialog.ck::backdrop { background: rgba(28,28,28,.55); }
+      dialog.dr { margin: 0 0 0 auto; width: min(420px, 100%); height: 100%; max-height: none; max-width: 100%; }
+      dialog.dr[open] { display: flex; flex-direction: column; animation: slin .35s ease-out; }
+      @keyframes slin { from { transform: translateX(100%); } }
+      .dr__h { padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--salvia); }
+      .dr__b { padding: 6px 20px 16px; overflow: auto; flex: 1; display: grid; gap: 14px; align-content: start; }
+      .dr__f { padding: 16px 20px; border-top: 1px solid var(--salvia); display: grid; gap: 10px; }
+      .ln { display: grid; grid-template-columns: 1fr auto 44px; gap: 8px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--creme); font-size: 14px; }
+      dl.sum { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; margin: 0; font-size: 14px; }
+      dl.sum dd { margin: 0; text-align: right; }
+      dl.sum .t { font-weight: 600; font-size: 16px; border-top: 1px solid var(--ouro); padding-top: 6px; }
+      .row2 { display: flex; gap: 8px; }
+      dialog.ck { width: min(640px, 94vw); border-radius: 18px; max-height: 92vh; }
+      .ck__h { padding: 20px 22px 0; }
+      .stepper { list-style: none; margin: 14px 0 8px; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; font: 500 12px/1.3 var(--sans); color: var(--tinta-2); }
+      .stepper [aria-current] { color: var(--tinta); font-weight: 600; }
+      .prog { height: 4px; border-radius: 4px; background: var(--creme); overflow: hidden; }
+      .prog i { display: block; height: 100%; width: 33%; background: var(--verde); transition: width .3s; }
+      .ck__b { padding: 20px 22px 22px; display: grid; gap: 14px; }
+      fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+      .opt { display: flex; gap: 10px; align-items: center; min-height: 46px; padding: 0 14px; border: 1px solid var(--salvia); border-radius: 10px; background: var(--branco); cursor: pointer; font-weight: 600; }
+      .opt input { width: 20px; min-height: 20px; height: 20px; accent-color: var(--verde); }
+      .qr { width: 156px; height: 156px; background: #fff; padding: 8px; border-radius: 10px; border: 1px solid var(--salvia); }
+      .code { font: 400 12px/1.4 ui-monospace, monospace; word-break: break-all; background: var(--creme); padding: 8px 10px; border-radius: 8px; }
+
+      /* ===== refinamento visual ===== */
+      body {
+        background-color: var(--fundo);
+        background-image:
+          radial-gradient(1100px 620px at 8% -8%, color-mix(in srgb, var(--creme) 75%, transparent), transparent 70%),
+          radial-gradient(900px 760px at 105% 38%, color-mix(in srgb, var(--salvia) 20%, transparent), transparent 70%),
+          radial-gradient(800px 600px at -5% 92%, color-mix(in srgb, var(--creme) 60%, transparent), transparent 70%),
+          linear-gradient(180deg, var(--fundo), color-mix(in srgb, var(--creme) 40%, var(--fundo)));
+        background-attachment: fixed;
+      }
+      body::before {
+        content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .32; mix-blend-mode: multiply;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .5 0 0 0 0 .36 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      }
+      h1, h2, h3 { font-weight: 500; letter-spacing: .005em; }
+      h1 { font-size: clamp(42px, 6.6vw, 82px); line-height: 1.02; font-weight: 500; }
+      h2 { font-size: clamp(32px, 4.4vw, 52px); line-height: 1.08; }
+      h3 { font-size: 24px; font-weight: 600; }
+      h1 em, h2 em { font-style: italic; font-weight: 400; color: var(--verde-2); }
+      .eyebrow { font: 700 14px/1.4 var(--sans); font-variant: all-small-caps; letter-spacing: .26em; text-transform: none; color: var(--verde-2); display: inline-flex; align-items: center; gap: 12px; }
+      .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--ouro); }
+      .lead { font-size: 19px; line-height: 1.7; font-weight: 300; color: var(--tinta-2); }
+      .muted.small, .small { line-height: 1.65; }
+      section.blk { padding: clamp(64px, 9vw, 120px) 0; }
+      .blk + .blk { border-top: 0; }
+      .x-head { max-width: 760px; margin: 0 auto 8px; text-align: center; display: grid; justify-items: center; gap: 14px; }
+      .x-head .lead { margin-top: 0; }
+
+      /* ornament: hairline + lily */
+      .x-orn { display: flex; align-items: center; justify-content: center; gap: 18px; color: var(--ouro); max-width: 520px; margin: 0 auto; padding: 0 20px; }
+      .x-orn span { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--ouro)); }
+      .x-orn span:last-child { background: linear-gradient(90deg, var(--ouro), transparent); }
+      .x-orn svg { width: 30px; height: 30px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.1; stroke-linecap: round; stroke-linejoin: round; }
+
+      /* header */
+      header.site { background: color-mix(in srgb, var(--fundo) 82%, transparent); backdrop-filter: blur(14px) saturate(1.1); -webkit-backdrop-filter: blur(14px); border-bottom: 0; }
+      header.site::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--ouro) 20%, var(--ouro) 80%, transparent); opacity: .7; }
+      nav.tabs button { font: 700 13px/1 var(--sans); font-variant: all-small-caps; letter-spacing: .16em; text-transform: none; transition: background .35s, color .35s, border-color .35s; }
+      nav.tabs .is-featured { background: #f4f2e4; }
+      nav.tabs button { transition: none; }
+      nav.tabs button[aria-selected="true"], nav.tabs .is-featured[aria-selected="true"] { background: #1f603b; border-color: #1f603b; color: #fff; }
+      .is-celevia nav.tabs button { color: #5a4718; }
+      .is-celevia nav.tabs .is-featured { background: #ede5d6; color: #1c1c1c; }
+      .is-celevia nav.tabs button[aria-selected="true"], .is-celevia nav.tabs .is-featured[aria-selected="true"] { background: #1c1c1c; border-color: #1c1c1c; color: #fff; }
+
+      /* buttons */
+      .btn { font: 700 14px/1 var(--sans); font-variant: all-small-caps; letter-spacing: .14em; min-height: 48px; padding: 0 26px; transition: background .4s, color .4s, border-color .4s, transform .4s var(--ease, ease), box-shadow .4s; }
+      .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px -12px color-mix(in srgb, var(--verde) 70%, transparent); }
+      .btn--ghost { background: color-mix(in srgb, var(--fundo) 55%, transparent); }
+      .btn--gold:hover { background: #b4b46c; border-color: #b4b46c; }
+      .btn:disabled:hover { transform: none; box-shadow: none; }
+
+      /* hero: full-bleed, feathered */
+      .x-hero { position: relative; isolation: isolate; }
+      .x-hero__media { position: relative; height: clamp(440px, 82vh, 800px); overflow: hidden; will-change: transform;
+        -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 52%, transparent 98%), linear-gradient(90deg, transparent 0%, #000 14%, #000 86%, transparent 100%);
+        -webkit-mask-composite: source-in; mask-image: linear-gradient(180deg, #000 0%, #000 52%, transparent 98%), linear-gradient(90deg, transparent 0%, #000 14%, #000 86%, transparent 100%); mask-composite: intersect; }
+      .x-hero__media img { width: 100%; height: 100%; object-fit: cover; transform-origin: 60% 40%; animation: x-kb 26s ease-in-out infinite alternate; }
+      @keyframes x-kb { from { transform: scale(1.12) translate3d(-1.5%, -1%, 0); } to { transform: scale(1.01) translate3d(1%, .5%, 0); } }
+      .x-hero__copy { position: relative; z-index: 2; margin-top: clamp(-260px, -22vw, -150px); text-align: center; display: grid; justify-items: center; gap: 18px; padding-bottom: 20px; }
+      .x-hero__copy::before { content: ""; position: absolute; z-index: -1; inset: -40px -10% -20px; background: radial-gradient(closest-side, color-mix(in srgb, var(--fundo) 94%, transparent) 55%, color-mix(in srgb, var(--fundo) 70%, transparent) 75%, transparent); pointer-events: none; }
+      .x-hero__copy h1 { max-width: 15ch; }
+      .x-hero__copy .lead { margin: 0 auto; }
+      .x-hero__copy .btns { justify-content: center; margin-top: 8px; }
+      .x-seal { position: absolute; z-index: 3; right: max(4vw, calc((100vw - 1120px) / 2)); top: clamp(-120px, -9vw, -70px); width: clamp(104px, 11vw, 136px); aspect-ratio: 1; color: var(--verde); filter: drop-shadow(0 8px 18px rgba(31, 60, 40, .16)); }
+      .x-seal svg { width: 100%; height: 100%; display: block; }
+      .x-ring { animation: x-spin 70s linear infinite; transform-origin: 60px 60px; }
+      .x-split__img img { position: relative; top: -9%; }
+      .x-band img { position: relative; top: -15%; }
+      @keyframes x-spin { to { transform: rotate(360deg); } }
+      .is-celevia .x-seal { color: var(--tinta); }
+      @media (max-width: 720px) { .x-seal { top: auto; bottom: calc(100% - 40px); right: 16px; width: 92px; } .x-hero__media { height: 62vh; min-height: 380px; } }
+
+      /* trio */
+      .x-trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; }
+      .x-trio > div { padding: 10px clamp(18px, 3vw, 40px); text-align: center; display: grid; gap: 10px; justify-items: center; }
+      .x-trio > div + div { border-left: 1px solid color-mix(in srgb, var(--ouro) 55%, transparent); }
+      .x-trio .fig { font: italic 400 clamp(46px, 5vw, 64px)/1 var(--serif); color: var(--verde-3); }
+      .x-trio h3 { font-size: 26px; }
+      @media (max-width: 760px) { .x-trio { grid-template-columns: 1fr; gap: 34px; } .x-trio > div + div { border-left: 0; border-top: 1px solid color-mix(in srgb, var(--ouro) 55%, transparent); padding-top: 34px; } }
+
+      /* split: offset image fading on one side */
+      .x-split { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: center; gap: clamp(24px, 4vw, 64px); }
+      .x-split__img { margin: 0 0 0 calc(-1 * max(20px, (100vw - 1120px) / 2 + 20px)); height: clamp(380px, 46vw, 620px); overflow: hidden;
+        -webkit-mask-image: linear-gradient(90deg, #000 45%, transparent 98%), linear-gradient(180deg, transparent 0%, #000 18%, #000 80%, transparent 100%); -webkit-mask-composite: source-in;
+        mask-image: linear-gradient(90deg, #000 45%, transparent 98%), linear-gradient(180deg, transparent 0%, #000 18%, #000 80%, transparent 100%); mask-composite: intersect; }
+      .x-split__img img { width: 100%; height: 118%; object-fit: cover; will-change: transform; }
+      .x-split--rev .x-split__img { order: 2; margin: 0 calc(-1 * max(20px, (100vw - 1120px) / 2 + 20px)) 0 0;
+        -webkit-mask-image: linear-gradient(270deg, #000 45%, transparent 98%), linear-gradient(180deg, transparent 0%, #000 18%, #000 80%, transparent 100%);
+        mask-image: linear-gradient(270deg, #000 45%, transparent 98%), linear-gradient(180deg, transparent 0%, #000 18%, #000 80%, transparent 100%); }
+      .x-split__txt { display: grid; gap: 16px; align-content: center; }
+      @media (max-width: 860px) {
+        .x-split { grid-template-columns: 1fr; }
+        .x-split__img, .x-split--rev .x-split__img { order: 0; margin: 0 -20px; height: 340px;
+          -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 14%, #000 60%, transparent 100%); mask-image: linear-gradient(180deg, transparent 0%, #000 14%, #000 60%, transparent 100%); }
+      }
+
+      /* steps as hairline list */
+      .x-steps { list-style: none; margin: 10px 0 0; padding: 0; display: grid; }
+      .x-steps li { display: grid; grid-template-columns: 64px 1fr; gap: 4px 18px; padding: 20px 0; border-top: 1px solid color-mix(in srgb, var(--ouro) 50%, transparent); }
+      .x-steps li:last-child { border-bottom: 1px solid color-mix(in srgb, var(--ouro) 50%, transparent); }
+      .x-steps .n { grid-row: span 2; font: italic 400 34px/1 var(--serif); color: var(--verde-3); }
+      .x-steps h3 { font-size: 24px; }
+      .x-steps--row { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 40px; }
+      .x-steps--row li { grid-template-columns: 1fr; padding: 22px 22px 6px 0; border-bottom: 0 !important; }
+      .x-steps--row .n { grid-row: auto; }
+      @media (max-width: 860px) { .x-steps--row { grid-template-columns: 1fr 1fr; gap: 0 20px; } }
+      @media (max-width: 520px) { .x-steps--row { grid-template-columns: 1fr; } }
+
+      /* wide band image, feathered top & bottom */
+      .x-band { position: relative; height: clamp(300px, 44vw, 560px); overflow: hidden; margin: 0;
+        -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 22%, #000 70%, transparent 100%), linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); -webkit-mask-composite: source-in;
+        mask-image: linear-gradient(180deg, transparent 0%, #000 22%, #000 70%, transparent 100%), linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); mask-composite: intersect; }
+      .x-band img { width: 100%; height: 130%; object-fit: cover; will-change: transform; }
+      .x-quote { text-align: center; font: italic 400 clamp(24px, 3vw, 34px)/1.35 var(--serif); color: var(--verde); max-width: 30ch; margin: -40px auto 0; position: relative; }
+
+      /* forms */
+      .x-formwrap { max-width: 900px; margin: 34px auto 0; padding: clamp(22px, 4vw, 44px); border-radius: 28px; background: color-mix(in srgb, var(--branco) 55%, transparent); box-shadow: 0 30px 60px -40px rgba(31, 60, 40, .35); }
+      input, select, textarea { border-radius: 12px; background: color-mix(in srgb, var(--branco) 85%, transparent); transition: border-color .3s, box-shadow .3s; }
+      input:hover, select:hover, textarea:hover { border-color: var(--verde-3); }
+
+      /* festa cards: frameless, feathered */
+      .festas { gap: 40px 28px; }
+      .festa { border: 0; background: none; border-radius: 0; overflow: visible; }
+      .festa:hover { border-color: transparent; }
+      .festa img { height: 260px; border-radius: 0; transition: transform 1.2s cubic-bezier(.2,.7,.2,1), filter .6s;
+        -webkit-mask-image: radial-gradient(ellipse 72% 70% at 50% 46%, #000 52%, transparent 100%); mask-image: radial-gradient(ellipse 72% 70% at 50% 46%, #000 52%, transparent 100%); }
+      .festa:hover img { transform: scale(1.04); filter: saturate(1.06); }
+      .festa__body { padding: 0 6px; margin-top: -6px; }
+      .festa__t { font: 500 28px/1.1 var(--serif); }
+      .festa .go { font-variant: all-small-caps; letter-spacing: .14em; font-size: 14px; transition: letter-spacing .4s; }
+      .festa:hover .go { letter-spacing: .2em; }
+      .tag { background: color-mix(in srgb, var(--creme) 70%, transparent); }
+      .filters { justify-content: center; }
+      .filters button { background: color-mix(in srgb, var(--branco) 60%, transparent); transition: background .3s, color .3s, border-color .3s; }
+      .filters button:hover { border-color: var(--verde-3); }
+
+      /* galeria: feathered */
+      .gal { gap: 18px; }
+      .gal button { border: 0; border-radius: 0; overflow: hidden; }
+      .gal img { height: 280px; transition: transform 1.2s cubic-bezier(.2,.7,.2,1);
+        -webkit-mask-image: radial-gradient(ellipse 70% 68% at 50% 50%, #000 58%, transparent 100%); mask-image: radial-gradient(ellipse 70% 68% at 50% 50%, #000 58%, transparent 100%); }
+      .gal button:hover img { transform: scale(1.05); }
+      .gal span { left: 50%; bottom: 14%; transform: translateX(-50%); font: 700 13px/1 var(--sans); font-variant: all-small-caps; letter-spacing: .14em; padding: 8px 14px; }
+      dialog.lb img { border-radius: 4px; }
+
+      /* sobre */
+      .arch { border: 0; background: none; padding: 0; border-radius: 0; }
+      .arch img { border-radius: 200px 200px 0 0; height: 480px;
+        -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent 100%); mask-image: linear-gradient(180deg, #000 60%, transparent 100%); }
+
+      /* celevia kits: editorial rows */
+      .x-kits { display: grid; gap: clamp(40px, 6vw, 90px); margin-top: 40px; }
+      .x-kits .kit { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); align-items: center; gap: clamp(20px, 4vw, 56px); background: none; border: 0; border-radius: 0; overflow: visible; }
+      .x-kits .kit img { height: clamp(300px, 36vw, 460px);
+        -webkit-mask-image: radial-gradient(ellipse 78% 74% at 42% 50%, #000 50%, transparent 100%); mask-image: radial-gradient(ellipse 78% 74% at 42% 50%, #000 50%, transparent 100%); transition: opacity .3s, transform 1.4s cubic-bezier(.2,.7,.2,1); }
+      .x-kits .kit:hover img { transform: scale(1.03); }
+      .x-kits .kit:nth-child(even) img { order: 2; -webkit-mask-image: radial-gradient(ellipse 78% 74% at 58% 50%, #000 50%, transparent 100%); mask-image: radial-gradient(ellipse 78% 74% at 58% 50%, #000 50%, transparent 100%); }
+      .x-kits .kit__b { padding: 0; gap: 14px; }
+      .x-kits .kit h3 { font-size: clamp(30px, 3.4vw, 42px); }
+      .x-kits .kit .btn { margin-top: 6px; align-self: start; }
+      .price { font-size: 36px; }
+      @media (max-width: 760px) { .x-kits .kit { grid-template-columns: 1fr; } .x-kits .kit:nth-child(even) img { order: 0; } }
+      .av > div { background: none; border: 0; border-radius: 0; border-bottom: 1px solid color-mix(in srgb, var(--ouro) 50%, transparent); padding: 10px 2px; }
+      .av { max-width: 720px; margin-left: auto; margin-right: auto; }
+
+      /* footer */
+      footer.site { position: relative; padding-top: 56px; }
+      footer.site::before { content: ""; position: absolute; left: 10%; right: 10%; top: 22px; height: 1px; background: linear-gradient(90deg, transparent, #c9c98a, transparent); opacity: .7; }
+      footer.site h3 { font-size: 22px; font-weight: 500; }
+      main { overflow-x: clip; }
+      .is-celevia h1 { font-size: clamp(44px, 6.6vw, 80px); }
+      .is-celevia .x-quote, .is-celevia h1 em, .is-celevia h2 em { color: var(--verde-2); }
+      .wa { transition: transform .4s; } .wa:hover { transform: scale(1.06); }
+
+      /* reveal on scroll */
+      .x-motion .rv { opacity: 0; transform: translate3d(0, 28px, 0); transition: opacity 1.1s cubic-bezier(.2,.7,.2,1), transform 1.1s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0s); }
+      .x-motion .rv.is-in { opacity: 1; transform: none; }
+      .x-motion .rv-l { transform: translate3d(-36px, 0, 0); }
+      .x-motion .rv-r { transform: translate3d(36px, 0, 0); }
+
+      @media (prefers-reduced-motion: reduce) {
+        .x-hero__media img, .x-ring { animation: none; }
+        .x-motion .rv { opacity: 1; transform: none; transition: none; }
+        .btn, .festa img, .gal img, .x-kits .kit img { transition: none; }
+        .btn:hover { transform: none; }
+      }
+
+      /* logos no cabeçalho */
+      .bar .logo-r { height: 68px; }
+      .bar .logo-c img { height: 72px; }
+      @media (max-width: 720px) { .bar .logo-r { height: 52px; } .bar .logo-c img { height: 48px; } }
+      .x-lockup { width: min(340px, 78vw); height: auto; margin: 0 auto 40px; }
+
+      /* celevia hero: imagem parada, texto por cima */
+      .x-cel { margin: 0; padding: 0; }
+      .x-cel__frame { position: relative; isolation: isolate; height: clamp(520px, 80vh, 780px); overflow: hidden; }
+      /* fundo: foto parada (sem animação, zoom, parallax ou transição), esmaecendo nas bordas e embaixo */
+      .x-cel__bg { position: absolute; inset: 0; z-index: 0; overflow: hidden;
+        -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 74%, transparent 100%), linear-gradient(90deg, transparent 0%, #000 7%, #000 93%, transparent 100%);
+        -webkit-mask-composite: source-in; mask-image: linear-gradient(180deg, #000 0%, #000 74%, transparent 100%), linear-gradient(90deg, transparent 0%, #000 7%, #000 93%, transparent 100%); mask-composite: intersect; }
+      .x-cel__frame { background: #f6f1e8; }
+      .x-cel__bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 0% 55%;
+        animation: none !important; transform: none !important; transition: none !important; will-change: auto; }
+      .x-cel__bg::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+        background: linear-gradient(270deg, rgba(246,241,232,.95) 0%, rgba(246,241,232,.9) 30%, rgba(246,241,232,.55) 46%, rgba(246,241,232,0) 62%); }
+      .x-cel__copy { position: absolute; z-index: 2; top: 46%; transform: translateY(-50%); left: 50%; right: 0; width: auto; box-sizing: border-box; display: grid; align-content: center; justify-items: center; gap: 14px; text-align: center; padding: 24px max(6vw, 24px); background: none; box-shadow: none; border-radius: 0; }
+      .x-cel__eyebrow { font: 500 13px/1.4 var(--sans); letter-spacing: .26em; font-variant: small-caps; text-transform: lowercase; color: #6b5a2c; }
+      .is-celevia .x-cel__word { font: 500 clamp(36px, 5.6vw, 100px)/1 "Cormorant Garamond", Georgia, serif; letter-spacing: .14em; margin-right: -.14em; white-space: nowrap; max-width: 100%; color: #7A6A3A; text-shadow: none; }
+      .x-cel__rule { width: 96px; height: 1px; border: 0; margin: 2px 0; background: #b0935a; }
+      .x-cel__slogan { font: italic 400 clamp(22px, 3vw, 36px)/1.2 "Cormorant Garamond", Georgia, serif; color: #1c1c1c; letter-spacing: .04em; text-shadow: none; }
+      .x-cel__copy .btn { margin-top: 8px; background: #1c1c1c; border-color: #1c1c1c; color: #f6f1e8; }
+      .x-cel__copy .btn:hover { background: #3a3630; border-color: #3a3630; }
+      .x-cel__intro { text-align: center; display: grid; justify-items: center; gap: 6px; margin-top: 28px; }
+      .x-cel__intro .lead { margin: 0 auto; }
+      @media (max-width: 720px) {
+        .x-cel__frame { height: clamp(540px, 88svh, 680px); }
+        .x-cel__bg { -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 86%, transparent 100%); mask-image: linear-gradient(180deg, #000 0%, #000 86%, transparent 100%); }
+        .x-cel__bg img { object-position: 12% 30%; }
+        .x-cel__bg::after { background: linear-gradient(0deg, rgba(246,241,232,.97) 0%, rgba(246,241,232,.93) 34%, rgba(246,241,232,.6) 50%, rgba(246,241,232,0) 66%); }
+        .x-cel__copy { top: auto; bottom: 8%; transform: none; left: 16px; right: 16px; width: auto; align-content: end; padding: 16px 12px; gap: 12px; }
+        .is-celevia .x-cel__word { font-size: clamp(36px, 12vw, 60px); letter-spacing: .18em; margin-right: -.18em; }
+      }
+
+      /* festas: grupos, selo ilustrativo, bolinhas de cor */
+      .x-fgroup + .x-fgroup { margin-top: 64px; }
+      .x-fgroup .festas, .x-folders, #gal-view .gal { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+      .festa__t small { font-size: 18px; }
+      .x-fgroup > h3 { font-size: clamp(26px, 3vw, 34px); text-align: center; margin-bottom: 26px; }
+      .x-ph { position: relative; display: block; overflow: hidden; }
+      .x-ph em { position: absolute; left: 50%; bottom: 13%; transform: translateX(-50%); font: 700 12px/1.2 var(--sans); font-style: normal; letter-spacing: .02em; white-space: nowrap; color: #fff; background: rgba(27, 42, 31, .82); padding: 6px 11px; border-radius: 999px; }
+      .x-dots { display: flex; gap: 6px; }
+      .x-dots i { width: 20px; height: 20px; border-radius: 50%; border: 1px solid rgba(0, 0, 0, .14); display: block; }
+      .x-empty { text-align: center; margin-top: 20px; }
+      .sw-rosazul { background: linear-gradient(135deg, #f2b5c4 50%, #9cc3e6 50%); }
+      .sw-lilagua { background: linear-gradient(135deg, #c6b3e3 50%, #93d6c8 50%); }
+      .sw-dourado { background: linear-gradient(135deg, #c8a96a 50%, #fff 50%); border: 1px solid var(--salvia); }
+      .sw-neutro { background: linear-gradient(135deg, #d9c6a8 50%, #b3c1a0 50%); }
+
+      /* galeria: pastas */
+      .x-folders { display: grid; gap: 40px 28px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 28px; }
+      .x-folder .festa__t::before { content: ""; display: inline-block; width: 18px; height: 13px; margin-right: 10px; border: 1.5px solid var(--ouro); border-radius: 2px 4px 4px 4px; vertical-align: 2px; }
+      .x-galbar { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin: 28px 0 22px; }
+      .x-galbar h3 { font-size: clamp(26px, 3vw, 34px); }
+
+      @media print {
+        .rv { opacity: 1 !important; transform: none !important; }
+        body::before { display: none; }
+        body { background: #fff; }
+        header.site, nav.tabs, .wa, footer.site, .panel:not(.is-on) { display: none !important; }
+        main { padding: 0; }
+      }
+      [hidden] { display: none !important; }
+    </style>
+  </head>
+  <body>
+    <img id="fav-reg-src" src="simbolo-r-verde.svg" alt="" hidden style="display:none" />
+    <img id="fav-reg-apple-src" src="simbolo-r-verde-512.png" alt="" hidden style="display:none" />
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+      <defs>
+        <symbol id="lily" viewBox="0 0 40 40">
+          <path d="M20 4c4 7 4.6 16.5 0 25-4.6-8.5-4-18 0-25z" />
+          <path d="M20 29C12.5 27.5 7 21 6.5 12.5c6 3 11 8.5 13.5 16.5z" />
+          <path d="M20 29c7.5-1.5 13-8 13.5-16.5-6 3-11 8.5-13.5 16.5z" />
+          <path d="M20 29v8M14 36.5c2.5-2.6 9.5-2.6 12 0" />
+        </symbol>
+        <path id="seal-arc" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1 -88 0" />
+        <symbol id="seal" viewBox="0 0 120 120">
+          <circle cx="60" cy="60" r="58" style="fill: var(--fundo); stroke: var(--ouro); stroke-width: 1" />
+          <circle cx="60" cy="60" r="33" style="fill: none; stroke: var(--ouro); stroke-width: .8" />
+          <g class="x-ring"><text font-family="Lato, sans-serif" font-size="8.6" font-weight="700" letter-spacing="2" fill="currentColor"><textPath href="#seal-arc">REGINA DECORAÇÕES · SANTO ANDRÉ ·</textPath></text></g>
+          <text x="60" y="54" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-style="italic" font-size="13" fill="currentColor">Desde</text>
+          <text x="60" y="74" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-weight="600" font-size="22" letter-spacing="1" fill="currentColor">1999</text>
+        </symbol>
+      </defs>
+    </svg>
+    <header class="site">
+      <div class="bar">
+        <img class="logo-r" src="logo-regina-completo.svg" alt="Regina Decorações" />
+        <span class="logo-c"><img src="logo-celevia-header.png" alt="Celevia" /><small>by Regina Decorações</small></span>
+        <nav class="tabs" role="tablist" aria-label="Seções do site">
+          <button role="tab" id="t-inicio" aria-controls="p-inicio" aria-selected="true">Início</button>
+          <button role="tab" id="t-festas" aria-controls="p-festas" aria-selected="false">Festas</button>
+          <button role="tab" id="t-galeria" aria-controls="p-galeria" aria-selected="false">Galeria</button>
+          <button role="tab" id="t-contrato" aria-controls="p-contrato" aria-selected="false">Contrato</button>
+          <button role="tab" id="t-sobre" aria-controls="p-sobre" aria-selected="false">Sobre</button>
+          <button role="tab" id="t-celevia" class="is-featured" aria-controls="p-celevia" aria-selected="false">Celevia by Regina</button>
+        </nav>
+        <button type="button" class="cartbtn" id="cart-btn" aria-label="Abrir carrinho, 0 itens"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7zM9 7a3 3 0 0 1 6 0" /></svg><b id="cart-n">0</b></button>
+      </div>
+    </header>
+
+    <main>
+      <!-- INÍCIO -->
+      <div class="panel is-on" id="p-inicio" role="tabpanel" aria-labelledby="t-inicio">
+        <section class="x-hero" aria-labelledby="h-regina">
+          <div class="x-hero__media" data-par="0.28"><img src="regina-hero.jpg" alt="Mesa decorada por Regina Decorações" /></div>
+          <div class="wrap x-hero__copy">
+            <div class="x-seal" aria-hidden="true"><svg viewBox="0 0 120 120"><use href="#seal" /></svg></div>
+            <p class="eyebrow rv">Santo André e Grande ABC · desde 1999</p>
+            <h1 id="h-regina" class="rv" style="--d: .1s">Decorações completas e <em>exclusivas</em> desde 1999</h1>
+            <p class="lead rv" style="--d: .2s">Casamentos, chás de bebê, festas infantis, temáticas e aniversários em Santo André e Grande ABC.</p>
+            <div class="btns rv" style="--d: .3s">
+              <a class="btn btn--gold" href="#orcamento">Pedir orçamento</a>
+              <a class="btn btn--ghost" href="#celevia" data-go="celevia">Conhecer a Celevia</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="blk">
+          <div class="x-orn rv" aria-hidden="true"><span></span><svg viewBox="0 0 40 40"><use href="#lily" /></svg><span></span></div>
+          <div class="wrap x-trio" style="margin-top: 56px">
+            <div class="rv">
+              <p class="fig" aria-hidden="true">27</p>
+              <h3>27 anos de festas</h3>
+              <p class="muted small">Da primeira mesa em 1999 às festas de hoje, sem perder o cuidado artesanal.</p>
+            </div>
+            <div class="rv" style="--d: .12s">
+              <p class="fig" aria-hidden="true">★</p>
+              <h3>Clientes por indicação</h3>
+              <p class="muted small">Quase todas as festas chegam pela recomendação de quem já celebrou com a Regina.</p>
+            </div>
+            <div class="rv" style="--d: .24s">
+              <p class="fig" aria-hidden="true">✿</p>
+              <h3>Arranjos florais naturais e artificiais</h3>
+              <p class="muted small">Flores escolhidas conforme o tema, a estação e o orçamento da festa.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="blk" style="padding-top: 0">
+          <div class="wrap x-split">
+            <figure class="x-split__img rv rv-l"><img src="festa-casamento.jpg" alt="Mesa de casamento decorada pela Regina" data-par="-0.06" /></figure>
+            <div class="x-split__txt">
+              <p class="eyebrow rv">Como funciona</p>
+              <h2 class="rv" style="--d: .1s">Quatro etapas, do primeiro oi à <em>desmontagem</em></h2>
+              <ol class="x-steps">
+                <li class="rv"><span class="n" aria-hidden="true">01</span><h3>Conversa</h3><p class="muted small">Você conta a data, o tema e o espaço. Ajustamos ideias no WhatsApp.</p></li>
+                <li class="rv" style="--d: .08s"><span class="n" aria-hidden="true">02</span><h3>Proposta</h3><p class="muted small">Enviamos itens, cores e valores. Reserva confirmada na data.</p></li>
+                <li class="rv" style="--d: .16s"><span class="n" aria-hidden="true">03</span><h3>Montagem</h3><p class="muted small">Chegamos antes dos convidados e montamos tudo no local.</p></li>
+                <li class="rv" style="--d: .24s"><span class="n" aria-hidden="true">04</span><h3>Desmontagem</h3><p class="muted small">Retiramos as peças depois da festa, na data combinada.</p></li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <figure class="x-band rv" aria-label="Mesa de chá de bebê decorada"><img src="festa-cha-bebe.jpg" alt="Mesa de chá de bebê decorada" data-par="-0.08" /></figure>
+        <p class="x-quote rv">Uma mesa que conta a história de quem celebra.</p>
+
+        <section class="blk" id="orcamento">
+          <div class="wrap">
+            <div class="x-head">
+              <p class="eyebrow rv">Orçamento</p>
+              <h2 class="rv">Conte sobre a sua <em>festa</em></h2>
+              <p class="lead rv">Preencha e o resumo vai pronto para o WhatsApp da Regina.</p>
+            </div>
+            <div class="x-formwrap rv">
+            <form class="f" id="orc" novalidate>
+              <div class="field"><label for="o-tipo">Tipo de festa</label>
+                <select id="o-tipo">
+                  <option>Casamento</option><option>Chá de bebê</option><option>Festa infantil</option><option>Festa temática</option><option>Aniversário</option><option>Outro</option>
+                </select>
+              </div>
+              <div class="field"><label for="o-data">Data da festa</label><input type="date" id="o-data" /></div>
+              <div class="field"><label for="o-cidade">Cidade</label><input id="o-cidade" placeholder="Santo André" /></div>
+              <div class="field"><label for="o-conv">Convidados</label><input type="number" min="1" id="o-conv" placeholder="60" /></div>
+              <div class="field"><label for="o-faixa">Faixa de investimento</label>
+                <select id="o-faixa">
+                  <option>Até R$ 1.000</option><option>R$ 1.000 – 2.500</option><option>R$ 2.500 – 5.000</option><option>Acima de R$ 5.000</option>
+                </select>
+              </div>
+              <div class="field"><label for="o-nome">Seu nome</label><input id="o-nome" placeholder="Como podemos te chamar?" /></div>
+              <div class="field span2"><label for="o-tema">Tema e cores</label><textarea id="o-tema" placeholder="Ex.: ursinho no bosque em verde sálvia, creme e dourado"></textarea></div>
+              <div class="span2"><button class="btn" type="submit">Enviar no WhatsApp</button></div>
+            </form>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- FESTAS -->
+      <div class="panel" id="p-festas" role="tabpanel" aria-labelledby="t-festas">
+        <section class="blk">
+          <div class="wrap">
+            <div class="x-head">
+              <p class="eyebrow rv">Festas</p>
+              <h2 class="rv">Seis grupos de festa, uma decoração <em>inteira</em> em cada</h2>
+              <p class="lead rv">Filtre por grupo ou pela paleta que você tem em mente. Toque num card para abrir a pasta na galeria.</p>
+            </div>
+            <div class="filters" id="festa-grupos" role="group" aria-label="Filtrar por grupo de festa"></div>
+            <div class="filters" id="festa-filters" role="group" aria-label="Filtrar por paleta de cores" style="margin-top: -10px"></div>
+            <div id="festa-cards">
+              <div class="x-fgroup" data-grupo="infantil">
+                <h3>Infantil temático</h3>
+                <div class="festas">
+                  <button type="button" class="festa" data-folder="infantil" data-cores="neutro branco"><span class="x-ph"><img src="festa-infantil.jpg" alt="Decoração infantil Ursinho" /><em>foto ilustrativa — em breve fotos reais</em></span><span class="festa__body"><span class="festa__t">Ursinho</span><span class="muted small">Ursinhos de pelúcia, balões em tons de bege e mesa clara.</span><span class="festa__tags"><span class="tag"><i class="sw-neutro"></i>Bege &amp; sálvia</span><span class="tag"><i class="sw-branco"></i>Branco &amp; creme</span></span><span class="go">Ver na galeria →</span></span></button>
+                  <button type="button" class="festa" data-folder="infantil" data-cores="verde neutro"><span class="x-ph"><img src="kit-aniversario.jpg" alt="Decoração infantil Safári" /><em>foto ilustrativa — em breve fotos reais</em></span><span class="festa__body"><span class="festa__t">Safári</span><span class="muted small">Bichinhos da selva, folhagens e painel com textura natural.</span><span class="festa__tags"><span class="tag"><i class="sw-verde"></i>Verde &amp; dourado</span><span class="tag"><i class="sw-neutro"></i>Bege &amp; sálvia</span></span><span class="go">Ver na galeria →</span></span></button>
+                  <button type="button" class="festa" data-folder="infantil" data-cores="colorido"><span class="x-ph"><img src="festa-tematica.jpg" alt="Decoração infantil Mundo Bita" /><em>foto ilustrativa — em breve fotos reais</em></span><span class="festa__body"><span class="festa__t">Mundo Bita</span><span class="muted small">Personagens do Bita, balões coloridos e cenário alegre.</span><span class="festa__tags"><span class="tag"><i class="sw-color"></i>Colorido</span></span><span class="go">Ver na galeria →</span></span></button>
+                  <button type="button" class="festa" data-folder="infantil" data-cores="lilas colorido"><span class="x-ph"><img src="festa-infantil.jpg" alt="Decoração infantil Huntrix, Guerreiras do K-Pop" /><em>foto ilustrativa — em breve fotos reais</em></span><span class="festa__body"><span class="festa__t">Huntrix <small class="muted">(Guerreiras do K-Pop)</small></span><span class="muted small">Palco pop, balões metalizados e tons neon de lilás e rosa.</span><span class="festa__tags"><span class="tag"><i class="sw-lilas"></i>Lilás &amp; azul</span><span class="tag"><i class="sw-color"></i>Colorido</span></span><span class="go">Ver na galeria →</span></span></button>
+                  <button type="button" class="festa" data-folder="infantil" data-cores="colorido"><span class="x-ph"><img src="kit-aniversario.jpg" alt="Decoração infantil Patrulha Canina" /><em>foto ilustrativa — em breve fotos reais</em></span><span class="festa__body"><span class="festa__t">Patrulha Canina</span><span class="muted small">Filhotes, ossinhos e balões em vermelho, azul e amarelo.</span><span class="festa__tags"><span class="tag"><i class="sw-color"></i>Colorido</span></span><span class="go">Ver na galeria →</span></span></button>
+                  <button type="button" class="festa" data-folder="infantil" data-cores="colorido verde"><span class="x-ph"><img src="festa-infantil.jpg" alt="Decoração de festa infantil" /><em>foto ilustrativa — em breve fotos reais</em></span><span class="festa__body"><span class="festa__t">Infantil</span><span class="muted small">Arcos de balões, cilindros e personagens do momento.</span><span class="festa__tags"><span class="tag"><i class="sw-color"></i>Colorido</span><span class="tag"><i class="sw-verde"></i>Verde &amp; dourado</span></span><span class="go">Ver na galeria →</span></span></button>
+                </div>
+              </div>
+
+              <div class="x-fgroup" data-grupo="revelacao">
+                <h3>Chá revelação</h3>
+                <div class="festas">
+                  <button type="button" class="festa" data-folder="revelacao" data-cores="rosazul"><span class="x-ph"><img src="kit-cha.jpg" alt="Chá revelação rosa e azul" /><em>foto ilustrativa — em breve fotos reais</em></span><span class="festa__body"><span class="festa__t">Rosa &amp; Azul clássico</span><span class="x-dots" aria-label="Cores: rosa, azul e branco"><i style="background:#f2b5c4"></i><i style="background:#9cc3e6"></i><i style="background:#ffffff"></i></span><span class="muted small">A dúvida dividida ao meio: balões rosa e azul e o grande momento na mesa.</span><span class="festa__tags"><span class="tag"><i class="sw-rosazul"></i>Rosa &amp; azul</span></span><span class="go">Ver na galeria →</span></span></button>
+                  <button type="button" class="festa" data-folder="revelacao" data-cores="lilagua"><span class="x-ph"><img src="festa-cha-bebe.jpg" alt="Chá revelação lilás e verde-água" /><em>foto ilustrativa — em breve fotos reais</em></span><span class="festa__body"><span class="festa__t">Lilás &amp; Verde-água</span><span class="x-dots" aria-label="Cores: lilás, verde-água e branco"><i style="background:#c6b3e3"></i><i style="background:#93d6c8"></i><i style="background:#ffffff"></i></span><span class="muted small">Tons suaves e modernos, fora do óbvio.</span><span class="festa__tags"><span class="tag"><i class="sw-lilagua"></i>Lilás &amp; verde-água</span></span><span class="go">Ver na galeria →</span></span></button>
+                  <button type="button" class="festa" data-folder="revelacao" data-cores="dourado branco"><span class="x-ph"><img src="kit-cha.jpg" alt="Chá revelação dourado e branco" /><em>foto ilustrativa — em breve fotos reais</em></span><span class="festa__body"><span class="festa__t">Dourado &amp; Branco</span><span class="x-dots" aria-label="Cores: dourado, branco e creme"><i style="background:#c8a96a"></i><i style="background:#ffffff"></i><i style="background:#efe6d2"></i></span><span class="muted small">Elegante e neutro, com detalhes metalizados.</span><span class="festa__tags"><span class="tag"><i class="sw-dourado"></i>Dourado &amp; branco</span></span><span class="go">Ver na galeria →</span></span></button>
+                  <button type="button" class="festa" data-folder="revelacao" data-cores="neutro"><span class="x-ph"><img src="festa-cha-bebe.jpg" alt="Chá revelação bege e sálvia" /><em>foto ilustrativa — em breve fotos reais</em></span><span class="festa__body"><span class="festa__t">Neutro bege &amp; sálvia</span><span class="x-dots" aria-label="Cores: bege, sálvia e off-white"><i style="background:#d9c6a8"></i><i style="background:#b3c1a0"></i><i style="background:#f4efe6"></i></span><span class="muted small">Folhagens, fibras naturais e tons de terra.</span><span class="festa__tags"><span class="tag"><i class="sw-neutro"></i>Bege &amp; sálvia</span></span><span class="go">Ver na galeria →</span></span></button>
+                </div>
+              </div>
+
+              <div class="x-fgroup" data-grupo="bebe">
+                <h3>Chá de bebê</h3>
+                <div class="festas">
+                  <button type="button" class="festa" data-folder="bebe" data-cores="verde branco"><span class="x-ph"><img src="festa-cha-bebe.jpg" alt="Decoração de chá de bebê" /><em>foto ilustrativa — em breve fotos reais</em></span><span class="festa__body"><span class="festa__t">Clássico</span><span class="muted small">Painéis redondos, bolo cenográfico e lembrancinhas na mesa.</span><span class="festa__tags"><span class="tag"><i class="sw-verde"></i>Verde &amp; dourado</span><span class="tag"><i class="sw-branco"></i>Branco &amp; creme</span></span><span class="go">Ver na galeria →</span></span></button>
+                  <button type="button" class="festa" data-folder="bebe" data-cores="neutro branco"><span class="x-ph"><img src="kit-cha.jpg" alt="Chá de bebê Ursinho" /><em>foto ilustrativa — em breve fotos reais</em></span><span class="festa__body"><span class="festa__t">Ursinho</span><span class="muted small">Ursinho de pelúcia, balões bege e mesa aconchegante.</span><span class="festa__tags"><span class="tag"><i class="sw-neutro"></i>Bege &amp; sálvia</span><span class="tag"><i class="sw-branco"></i>Branco &amp; creme</span></span><span class="go">Ver na galeria →</span></span></button>
+                  <button type="button" class="festa" data-folder="bebe" data-cores="verde neutro"><span class="x-ph"><img src="festa-cha-bebe.jpg" alt="Chá de bebê Safári baby" /><em>foto ilustrativa — em breve fotos reais</em></span><span class="festa__body"><span class="festa__t">Safári baby</span><span class="muted small">Bichinhos filhotes, folhagens e tons de verde.</span><span class="festa__tags"><span class="tag"><i class="sw-verde"></i>Verde &amp; dourado</span><span class="tag"><i class="sw-neutro"></i>Bege &amp; sálvia</span></span><span class="go">Ver na galeria →</span></span></button>
+                  <button type="button" class="festa" data-folder="bebe" data-cores="rosa branco"><span class="x-ph"><img src="kit-cha.jpg" alt="Chá de bebê Floral delicado" /><em>foto ilustrativa — em breve fotos reais</em></span><span class="festa__body"><span class="festa__t">Floral delicado</span><span class="muted small">Flores miúdas, tons rosados e arranjos leves.</span><span class="festa__tags"><span class="tag"><i class="sw-rosa"></i>Rosa &amp; terracota</span><span class="tag"><i class="sw-branco"></i>Branco &amp; creme</span></span><span class="go">Ver na galeria →</span></span></button>
+                  <button type="button" class="festa" data-folder="bebe" data-cores="lilas branco"><span class="x-ph"><img src="festa-cha-bebe.jpg" alt="Chá de bebê Nuvens e balões" /><em>foto ilustrativa — em breve fotos reais</em></span><span class="festa__body"><span class="festa__t">Nuvens &amp; balões</span><span class="muted small">Nuvens de algodão, balões em azul-claro e muito branco.</span><span class="festa__tags"><span class="tag"><i class="sw-lilas"></i>Lilás &amp; azul</span><span class="tag"><i class="sw-branco"></i>Branco &amp; creme</span></span><span class="go">Ver na galeria →</span></span></button>
+                </div>
+              </div>
+
+              <div class="x-fgroup" data-grupo="casamento">
+                <h3>Casamento</h3>
+                <div class="festas">
+                  <button type="button" class="festa" data-folder="casamentos" data-cores="verde branco"><span class="x-ph"><img src="festa-casamento.jpg" alt="Casamento clássico verde e branco" /><em>foto ilustrativa — em breve fotos reais</em></span><span class="festa__body"><span class="festa__t">Clássico verde &amp; branco</span><span class="muted small">Mesa dos noivos, arranjos de flores e painel de entrada.</span><span class="festa__tags"><span class="tag"><i class="sw-verde"></i>Verde &amp; dourado</span><span class="tag"><i class="sw-branco"></i>Branco &amp; creme</span></span><span class="go">Ver na galeria →</span></span></button>
+                  <button type="button" class="festa" data-folder="casamentos" data-cores="neutro verde"><span class="x-ph"><img src="kit-brunch.jpg" alt="Casamento rústico" /><em>foto ilustrativa — em breve fotos reais</em></span><span class="festa__body"><span class="festa__t">Rústico</span><span class="muted small">Madeira, juta, flores do campo e luz amarela.</span><span class="festa__tags"><span class="tag"><i class="sw-neutro"></i>Bege &amp; sálvia</span><span class="tag"><i class="sw-verde"></i>Verde &amp; dourado</span></span><span class="go">Ver na galeria →</span></span></button>
+                  <button type="button" class="festa" data-folder="casamentos" data-cores="neutro rosa"><span class="x-ph"><img src="festa-casamento.jpg" alt="Casamento boho" /><em>foto ilustrativa — em breve fotos reais</em></span><span class="festa__body"><span class="festa__t">Boho</span><span class="muted small">Capim-dos-pampas, macramê e tons terrosos.</span><span class="festa__tags"><span class="tag"><i class="sw-neutro"></i>Bege &amp; sálvia</span><span class="tag"><i class="sw-rosa"></i>Rosa &amp; terracota</span></span><span class="go">Ver na galeria →</span></span></button>
+                  <button type="button" class="festa" data-folder="casamentos" data-cores="branco dourado"><span class="x-ph"><img src="kit-jantar.jpg" alt="Mini wedding" /><em>foto ilustrativa — em breve fotos reais</em></span><span class="festa__body"><span class="festa__t">Mini wedding</span><span class="muted small">Mesa posta para poucos convidados, com o mesmo cuidado.</span><span class="festa__tags"><span class="tag"><i class="sw-branco"></i>Branco &amp; creme</span><span class="tag"><i class="sw-dourado"></i>Dourado &amp; branco</span></span><span class="go">Ver na galeria →</span></span></button>
+                  <button type="button" class="festa" data-folder="casamentos" data-cores="rosa branco"><span class="x-ph"><img src="festa-casamento.jpg" alt="Casamento romântico floral" /><em>foto ilustrativa — em breve fotos reais</em></span><span class="festa__body"><span class="festa__t">Romântico floral</span><span class="muted small">Muitas flores, tons rosados e velas por toda a mesa.</span><span class="festa__tags"><span class="tag"><i class="sw-rosa"></i>Rosa &amp; terracota</span><span class="tag"><i class="sw-branco"></i>Branco &amp; creme</span></span><span class="go">Ver na galeria →</span></span></button>
+                  <button type="button" class="festa" data-folder="casamentos" data-cores="dourado"><span class="x-ph"><img src="kit-jantar.jpg" alt="Casamento dourado elegante" /><em>foto ilustrativa — em breve fotos reais</em></span><span class="festa__body"><span class="festa__t">Dourado elegante</span><span class="muted small">Castiçais, sousplats dourados e arranjos altos.</span><span class="festa__tags"><span class="tag"><i class="sw-dourado"></i>Dourado &amp; branco</span></span><span class="go">Ver na galeria →</span></span></button>
+                </div>
+              </div>
+
+              <div class="x-fgroup" data-grupo="adulto">
+                <h3>Aniversário adulto</h3>
+                <div class="festas">
+                  <button type="button" class="festa" data-folder="aniversarios" data-cores="rosa"><span class="x-ph"><img src="festa-aniversario.jpg" alt="Decoração de aniversário" /><em>foto ilustrativa — em breve fotos reais</em></span><span class="festa__body"><span class="festa__t">Aniversário</span><span class="muted small">Mesas de bolo elegantes para 15, 30, 50 anos e bodas.</span><span class="festa__tags"><span class="tag"><i class="sw-rosa"></i>Rosa &amp; terracota</span></span><span class="go">Ver na galeria →</span></span></button>
+                </div>
+              </div>
+
+              <div class="x-fgroup" data-grupo="tematica">
+                <h3>Temáticas</h3>
+                <div class="festas">
+                  <button type="button" class="festa" data-folder="tematicas" data-cores="lilas colorido"><span class="x-ph"><img src="festa-tematica.jpg" alt="Decoração de festa temática" /><em>foto ilustrativa — em breve fotos reais</em></span><span class="festa__body"><span class="festa__t">Temáticas</span><span class="muted small">Do cinema ao jardim encantado: cenário inteiro montado no local.</span><span class="festa__tags"><span class="tag"><i class="sw-lilas"></i>Lilás &amp; azul</span><span class="tag"><i class="sw-color"></i>Colorido</span></span><span class="go">Ver na galeria →</span></span></button>
+                </div>
+              </div>
+              <p class="muted x-empty is-hidden" id="festa-vazio">Nenhuma festa com essa combinação. Tente outra cor ou grupo.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- GALERIA -->
+      <div class="panel" id="p-galeria" role="tabpanel" aria-labelledby="t-galeria">
+        <section class="blk">
+          <div class="wrap">
+            <div class="x-head">
+              <p class="eyebrow rv">Galeria</p>
+              <h2 class="rv">Mesas, painéis e <em>arranjos</em></h2>
+              <p class="lead rv">Pastas por estilo de festa. Fotos ilustrativas — em breve, fotos reais das festas.</p>
+            </div>
+            <div class="x-folders" id="gal-folders">
+              <button type="button" class="festa x-folder" data-folder="casamentos"><img src="festa-casamento.jpg" alt="" /><span class="festa__body"><span class="festa__t">Casamentos</span><span class="muted small" data-count></span><span class="go">Abrir pasta →</span></span></button>
+              <button type="button" class="festa x-folder" data-folder="bebe"><img src="festa-cha-bebe.jpg" alt="" /><span class="festa__body"><span class="festa__t">Chá de bebê</span><span class="muted small" data-count></span><span class="go">Abrir pasta →</span></span></button>
+              <button type="button" class="festa x-folder" data-folder="revelacao"><img src="kit-cha.jpg" alt="" /><span class="festa__body"><span class="festa__t">Chá revelação</span><span class="muted small" data-count></span><span class="go">Abrir pasta →</span></span></button>
+              <button type="button" class="festa x-folder" data-folder="infantil"><img src="festa-infantil.jpg" alt="" /><span class="festa__body"><span class="festa__t">Infantil temático</span><span class="muted small" data-count></span><span class="go">Abrir pasta →</span></span></button>
+              <button type="button" class="festa x-folder" data-folder="aniversarios"><img src="festa-aniversario.jpg" alt="" /><span class="festa__body"><span class="festa__t">Aniversários</span><span class="muted small" data-count></span><span class="go">Abrir pasta →</span></span></button>
+              <button type="button" class="festa x-folder" data-folder="tematicas"><img src="festa-tematica.jpg" alt="" /><span class="festa__body"><span class="festa__t">Temáticas</span><span class="muted small" data-count></span><span class="go">Abrir pasta →</span></span></button>
+              <button type="button" class="festa x-folder" data-folder="pecas"><img src="kit-brunch.jpg" alt="" /><span class="festa__body"><span class="festa__t">Peças para locação</span><span class="muted small" data-count></span><span class="go">Abrir pasta →</span></span></button>
+            </div>
+            <div id="gal-view" class="is-hidden">
+              <div class="x-galbar"><button type="button" class="btn btn--ghost" id="gal-back">← Todas as pastas</button><h3 id="gal-title" tabindex="-1"></h3></div>
+              <div class="gal is-hidden" data-folder="casamentos" data-nome="Casamentos">
+                <button type="button" data-cap="Clássico verde &amp; branco"><img src="festa-casamento.jpg" alt="Mesa de casamento clássica verde e branca" /><span>Clássico verde &amp; branco</span></button>
+                <button type="button" data-cap="Mini wedding"><img src="kit-jantar.jpg" alt="Mesa posta de mini wedding" /><span>Mini wedding</span></button>
+                <button type="button" data-cap="Rústico"><img src="kit-brunch.jpg" alt="Mesa rústica de casamento" /><span>Rústico</span></button>
+                <button type="button" data-cap="Mesa dos noivos"><img src="regina-hero.jpg" alt="Mesa dos noivos decorada" /><span>Mesa dos noivos</span></button>
+              </div>
+              <div class="gal is-hidden" data-folder="bebe" data-nome="Chá de bebê">
+                <button type="button" data-cap="Clássico"><img src="festa-cha-bebe.jpg" alt="Mesa de chá de bebê clássica" /><span>Clássico</span></button>
+                <button type="button" data-cap="Ursinho"><img src="kit-cha.jpg" alt="Mesa de chá de bebê Ursinho" /><span>Ursinho</span></button>
+                <button type="button" data-cap="Floral delicado"><img src="festa-aniversario.jpg" alt="Mesa de chá de bebê floral" /><span>Floral delicado</span></button>
+              </div>
+              <div class="gal is-hidden" data-folder="revelacao" data-nome="Chá revelação">
+                <button type="button" data-cap="Rosa &amp; Azul clássico"><img src="kit-cha.jpg" alt="Mesa de chá revelação rosa e azul" /><span>Rosa &amp; Azul</span></button>
+                <button type="button" data-cap="Neutro bege &amp; sálvia"><img src="festa-cha-bebe.jpg" alt="Mesa de chá revelação bege e sálvia" /><span>Bege &amp; sálvia</span></button>
+              </div>
+              <div class="gal is-hidden" data-folder="infantil" data-nome="Infantil temático">
+                <button type="button" data-cap="Infantil"><img src="festa-infantil.jpg" alt="Festa infantil decorada" /><span>Infantil</span></button>
+                <button type="button" data-cap="Safári"><img src="kit-aniversario.jpg" alt="Festa infantil Safári" /><span>Safári</span></button>
+                <button type="button" data-cap="Mundo Bita"><img src="festa-tematica.jpg" alt="Festa infantil Mundo Bita" /><span>Mundo Bita</span></button>
+              </div>
+              <div class="gal is-hidden" data-folder="aniversarios" data-nome="Aniversários">
+                <button type="button" data-cap="Mesa de bolo"><img src="festa-aniversario.jpg" alt="Mesa de aniversário decorada" /><span>Mesa de bolo</span></button>
+                <button type="button" data-cap="Arco de balões"><img src="kit-aniversario.jpg" alt="Aniversário com arco de balões verde e dourado" /><span>Arco de balões</span></button>
+              </div>
+              <div class="gal is-hidden" data-folder="tematicas" data-nome="Temáticas">
+                <button type="button" data-cap="Jardim encantado"><img src="festa-tematica.jpg" alt="Festa temática decorada" /><span>Jardim encantado</span></button>
+                <button type="button" data-cap="Cenário completo"><img src="banner-horizontal.jpg" alt="Cenário temático montado" /><span>Cenário completo</span></button>
+              </div>
+              <div class="gal is-hidden" data-folder="pecas" data-nome="Peças para locação">
+                <button type="button" data-cap="Suplás e mesa posta"><img src="kit-brunch.jpg" alt="Suplás e itens de mesa posta" /><span>Suplás e mesa posta</span></button>
+                <button type="button" data-cap="Castiçais e toalhas"><img src="kit-jantar.jpg" alt="Castiçais dourados e toalha de linho" /><span>Castiçais e toalhas</span></button>
+                <button type="button" data-cap="Painel, cilindros e balões"><img src="kit-aniversario.jpg" alt="Painel arco, cilindros e arco de balões" /><span>Painel e cilindros</span></button>
+                <button type="button" data-cap="Arranjos florais"><img src="kit-cha.jpg" alt="Arranjos e suporte de bolo" /><span>Arranjos florais</span></button>
+              </div>
+            </div>
+            <p class="small muted" style="margin-top: 18px">Fotos ilustrativas — em breve, fotos reais.</p>
+          </div>
+        </section>
+        <dialog class="lb" id="lb" aria-label="Foto ampliada">
+          <div id="lb-img"></div>
+          <div class="lb__bar"><span id="lb-cap"></span><button class="btn" id="lb-close" type="button">Fechar</button></div>
+        </dialog>
+      </div>
+
+      <!-- CONTRATO -->
+      <div class="panel" id="p-contrato" role="tabpanel" aria-labelledby="t-contrato">
+        <section class="blk">
+          <div class="wrap">
+            <div class="x-head">
+              <p class="eyebrow">Contrato</p>
+              <h2>Do orçamento ao contrato</h2>
+              <p class="lead">Conte sobre a sua festa e veja como fica o contrato depois de fechar.</p>
+            </div>
+            <div class="x-ctr">
+              <div class="x-formwrap">
+                <h3 class="x-ctr__t">Peça seu orçamento</h3>
+                <form class="f" id="orc2" novalidate>
+                  <div class="field"><label for="oc-tipo">Tipo de festa</label>
+                    <select id="oc-tipo">
+                      <option>Casamento</option><option>Chá de bebê</option><option>Festa infantil</option><option>Festa temática</option><option>Aniversário</option><option>Outro</option>
+                    </select>
+                  </div>
+                  <div class="field"><label for="oc-data">Data da festa</label><input type="date" id="oc-data" /></div>
+                  <div class="field"><label for="oc-cidade">Cidade</label><input id="oc-cidade" placeholder="Santo André" /></div>
+                  <div class="field"><label for="oc-conv">Convidados</label><input type="number" min="1" id="oc-conv" placeholder="60" /></div>
+                  <div class="field"><label for="oc-faixa">Faixa de investimento</label>
+                    <select id="oc-faixa">
+                      <option>Até R$ 1.000</option><option>R$ 1.000 – 2.500</option><option>R$ 2.500 – 5.000</option><option>Acima de R$ 5.000</option>
+                    </select>
+                  </div>
+                  <div class="field"><label for="oc-nome">Seu nome</label><input id="oc-nome" placeholder="Como podemos te chamar?" /></div>
+                  <div class="field span2"><label for="oc-tema">Tema e cores</label><textarea id="oc-tema" placeholder="Ex.: ursinho no bosque em verde sálvia, creme e dourado"></textarea></div>
+                  <div class="span2"><button class="btn" type="submit">Enviar no WhatsApp</button></div>
+                </form>
+              </div>
+
+              <div class="x-ctr__doc">
+              <h3 class="x-ctr__t">Depois de fechar a festa</h3>
+              <p class="x-ctr__label">Exemplo · contrato enviado após a confirmação</p>
+              <div class="x-sheetwrap"><button type="button" class="x-sheet" id="ctr-sheet" title="Ampliar contrato"><img src="contrato-exemplo.jpg" alt="Contrato de locação da Regina Decorações, com dados de cliente fictícios" width="1414" height="2000" /></button></div>
+              <p class="x-ctr__note small muted">Este é o contrato que a Regina usa hoje. Os dados da cliente foram trocados por dados de exemplo. Ele é enviado depois que a data e o orçamento são confirmados.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- SOBRE -->
+      <div class="panel" id="p-sobre" role="tabpanel" aria-labelledby="t-sobre">
+        <section class="blk">
+          <div class="wrap sobre">
+            <div class="arch rv rv-l"><img src="foto-regina.jpg" alt="Regina A. Henrique" /></div>
+            <div>
+              <p class="eyebrow">Sobre</p>
+              <h2>Regina A. Henrique</h2>
+              <div class="lead" style="display: grid; gap: 14px">
+                <p>Regina A. Henrique começou a decorar festas em 1999, em Santo André.</p>
+                <p>Cada festa é pensada nos detalhes: flores, cores e uma mesa que conta a história de quem celebra.</p>
+                <p>Quase todas as clientes chegam por indicação, e é essa confiança que guia o trabalho.</p>
+              </div>
+              <div class="btns"><a class="btn" href="https://wa.me/5511976959318" target="_blank" rel="noopener">Falar com a Regina</a></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- CELEVIA -->
+      <div class="panel" id="p-celevia" role="tabpanel" aria-labelledby="t-celevia">
+        <section class="x-cel" id="celevia" aria-labelledby="h-celevia">
+          <div class="x-cel__frame">
+            <div class="x-cel__bg"><img src="banner-celevia-hd.jpg" alt="Ilustração de kit Celevia: arco de balões, arcos e bolo" /></div>
+            <div class="x-cel__copy">
+              <p class="x-cel__eyebrow">by Regina</p>
+              <h1 id="h-celevia" class="x-cel__word">CELEVIA</h1>
+              <hr class="x-cel__rule" aria-hidden="true" />
+              <p class="x-cel__slogan">Levou. Montou. Celebrou.</p>
+              <a class="btn" href="#catalogo">Ver os kits</a>
+            </div>
+          </div>
+          <div class="wrap x-cel__intro">
+            <p class="lead">Kits de decoração prontos para alugar. Escolha, retire, monte com o guia e devolva.</p>
+            <div class="when">
+              <label>Quando é a sua festa?<input type="date" id="c-date" data-date /></label>
+              <span class="tag" id="c-ret">Retirada (véspera): escolha a data</span>
+              <span class="tag" id="c-dev">Devolução (dia seguinte): escolha a data</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="blk">
+          <div class="x-orn rv" aria-hidden="true"><span></span><svg viewBox="0 0 40 40"><use href="#lily" /></svg><span></span></div>
+          <div class="wrap" style="margin-top: 48px">
+            <img class="x-lockup rv" src="logo-celevia-transparente.png" alt="Celevia by Regina — Levou. Montou. Celebrou." />
+            <div class="x-head">
+              <p class="eyebrow rv">Como funciona</p>
+              <h2 class="rv">Do clique à festa em <em>quatro passos</em></h2>
+            </div>
+            <ol class="x-steps x-steps--row">
+              <li class="rv"><span class="n" aria-hidden="true">01</span><h3>Escolha o kit</h3><p class="muted small">Pelo catálogo, já com a data da festa.</p></li>
+              <li class="rv" style="--d: .08s"><span class="n" aria-hidden="true">02</span><h3>Retire em Santo André</h3><p class="muted small">Na véspera, no horário que você escolher.</p></li>
+              <li class="rv" style="--d: .16s"><span class="n" aria-hidden="true">03</span><h3>Monte com o guia</h3><p class="muted small">Cada kit vem com o passo a passo da montagem.</p></li>
+              <li class="rv" style="--d: .24s"><span class="n" aria-hidden="true">04</span><h3>Devolva</h3><p class="muted small">No dia seguinte à festa, e a caução volta para você.</p></li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="blk" id="catalogo" style="padding-top: 0">
+          <div class="wrap">
+            <div class="x-head">
+              <p class="eyebrow rv">Catálogo · valores ilustrativos</p>
+              <h2 class="rv">Kits prontos para <em>alugar</em></h2>
+            </div>
+            <div class="filters" id="kit-filters" aria-label="Filtrar kits"></div>
+            <div class="x-kits" id="kit-cards">
+              <article class="kit" id="kit-aniv" data-cat="aniv"><img src="kit-aniversario.jpg" alt="Kit Aniversário Oliva montado" /><div class="kit__b">
+                <h3>Kit Aniversário Oliva</h3><ul><li>Painel arco</li><li>Arco de balões verde e dourado</li><li>3 cilindros</li></ul>
+                <p class="price">R$ 189 <small>/ 3 dias</small></p><p class="muted small">Caução R$ 100 (reembolsável)</p>
+                <p class="err is-hidden" id="na-aniv">Indisponível nesta data. <a href="#kit-cha">Veja o Kit Chá Delicado</a></p>
+                <button type="button" class="btn" data-add="aniv">Adicionar</button></div></article>
+              <article class="kit" id="kit-cha" data-cat="cha"><img src="kit-cha.jpg" alt="Kit Chá Delicado montado" /><div class="kit__b">
+                <h3>Kit Chá Delicado</h3><ul><li>Painel redondo</li><li>Balões sálvia e creme</li><li>Suporte de bolo</li></ul>
+                <p class="price">R$ 169 <small>/ 3 dias</small></p><p class="muted small">Caução R$ 100 (reembolsável)</p>
+                <button type="button" class="btn" data-add="cha">Adicionar</button></div></article>
+              <article class="kit" data-cat="brunch"><img src="kit-brunch.jpg" alt="Kit Mesa Posta Brunch montado" /><div class="kit__b">
+                <h3>Kit Mesa Posta Brunch</h3><ul><li>10 sousplats</li><li>Guardanapos de linho</li><li>Arranjos</li></ul>
+                <p class="price">R$ 149 <small>/ 3 dias</small></p><p class="muted small">Caução R$ 80 (reembolsável)</p>
+                <button type="button" class="btn" data-add="brunch">Adicionar</button></div></article>
+              <article class="kit" data-cat="jantar"><img src="kit-jantar.jpg" alt="Kit Jantar Romântico montado" /><div class="kit__b">
+                <h3>Kit Jantar Romântico</h3><ul><li>Toalha de linho</li><li>Castiçais dourados</li><li>Arranjo floral</li></ul>
+                <p class="price">R$ 129 <small>/ 3 dias</small></p><p class="muted small">Caução R$ 80 (reembolsável)</p>
+                <button type="button" class="btn" data-add="jantar">Adicionar</button></div></article>
+            </div>
+
+            <div class="x-orn" aria-hidden="true" style="margin-top: 80px"><span></span><svg viewBox="0 0 40 40"><use href="#lily" /></svg><span></span></div>
+            <h3 style="margin-top: 28px; text-align: center; font-size: 32px">Peças avulsas</h3>
+            <div class="av">
+              <div><span>Suplá espelhado 30 cm <span class="muted small">R$ 6/un</span></span><span class="qty"><button type="button" class="x" data-inc="supla" data-d="-1" aria-label="Menos suplá">−</button><output data-q="supla">0</output><button type="button" class="x" data-inc="supla" data-d="1" aria-label="Mais suplá">+</button></span></div>
+              <div><span>Cilindro decorativo <span class="muted small">R$ 35</span></span><span class="qty"><button type="button" class="x" data-inc="cil" data-d="-1" aria-label="Menos cilindro">−</button><output data-q="cil">0</output><button type="button" class="x" data-inc="cil" data-d="1" aria-label="Mais cilindro">+</button></span></div>
+              <div><span>Arranjo de mesa <span class="muted small">R$ 25</span></span><span class="qty"><button type="button" class="x" data-inc="arr" data-d="-1" aria-label="Menos arranjo">−</button><output data-q="arr">0</output><button type="button" class="x" data-inc="arr" data-d="1" aria-label="Mais arranjo">+</button></span></div>
+            </div>
+            <p class="muted small" style="margin-top: 12px">Valores ilustrativos.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- carrinho -->
+    <dialog class="dr" id="dr" aria-labelledby="dr-t">
+      <div class="dr__h"><h3 id="dr-t">Seu carrinho</h3><button type="button" class="x" data-close aria-label="Fechar carrinho">×</button></div>
+      <div class="dr__b">
+        <div id="d-list"></div>
+        <div class="field"><label for="d-date">Data da festa</label><input type="date" id="d-date" data-date /></div>
+        <p class="small muted" id="d-dates">Escolha a data para ver retirada e devolução.</p>
+        <div class="field"><label for="d-cup">Cupom</label><div class="row2"><input id="d-cup" placeholder="CELEVIA10" /><button type="button" class="btn btn--ghost" id="d-cup-ok">Aplicar</button></div><p class="small" id="d-cup-msg" role="status"></p></div>
+      </div>
+      <div class="dr__f">
+        <dl class="sum">
+          <dt>Subtotal do aluguel</dt><dd id="d-sub">R$ 0,00</dd>
+          <dt class="d-off is-hidden">Cupom CELEVIA10 (−10%)</dt><dd class="d-off is-hidden" id="d-desc"></dd>
+          <dt>Caução reembolsável</dt><dd id="d-cau">R$ 0,00</dd>
+          <dt class="t">Total</dt><dd class="t" id="d-tot">R$ 0,00</dd>
+        </dl>
+        <p class="err" id="d-err" role="alert"></p>
+        <button type="button" class="btn" id="d-go">Finalizar aluguel</button>
+      </div>
+    </dialog>
+
+    <!-- checkout -->
+    <dialog class="ck" id="ck" aria-labelledby="ck-t">
+      <div class="ck__h">
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px"><h3 id="ck-t">Finalizar aluguel</h3><button type="button" class="x" data-close aria-label="Fechar">×</button></div>
+        <span class="tag">Pagamento simulado (protótipo)</span>
+        <ol class="stepper"><li>1 · Seus dados</li><li>2 · Retirada</li><li>3 · Pagamento</li></ol>
+        <div class="prog" role="progressbar" aria-label="Etapa do checkout" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1"><i></i></div>
+      </div>
+      <form class="ck__b" id="ck-f" novalidate>
+        <fieldset data-step="1" aria-label="Seus dados">
+          <div class="field"><label for="k-nome">Nome</label><input id="k-nome" required autocomplete="name" /></div>
+          <div class="field"><label for="k-cpf">CPF</label><input id="k-cpf" required inputmode="numeric" placeholder="000.000.000-00" /></div>
+          <div class="field"><label for="k-tel">WhatsApp</label><input id="k-tel" required type="tel" placeholder="(11) 90000-0000" /></div>
+          <div class="field"><label for="k-mail">E-mail</label><input id="k-mail" required type="email" autocomplete="email" /></div>
+        </fieldset>
+        <fieldset data-step="2" aria-label="Retirada" class="is-hidden">
+          <p class="span2 card card--creme small"><b>Retirada em Santo André/SP</b><br><span id="k-dts"></span></p>
+          <div class="field"><label for="k-hr">Horário de retirada</label><select id="k-hr"><option>9h</option><option>12h</option><option>15h</option><option>18h</option></select></div>
+          <div class="field"><label for="k-hd">Horário de devolução</label><select id="k-hd"><option>9h</option><option>12h</option><option>15h</option><option>18h</option></select></div>
+          <label class="chkrow span2 small"><input type="checkbox" id="k-ok" required /><span>Li e aceito os termos: avarias e peças danificadas são cobradas pelo valor de reposição; atraso na devolução = diária extra; em caso de cancelamento o valor pago não é devolvido.</span></label>
+        </fieldset>
+        <fieldset data-step="3" aria-label="Pagamento" class="is-hidden">
+          <label class="opt"><input type="radio" name="pg" value="Pix" checked /> Pix</label>
+          <label class="opt"><input type="radio" name="pg" value="Cartão" /> Cartão até 3x</label>
+          <div class="span2" id="k-pix" style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center">
+            <svg class="qr" id="k-qr" viewBox="0 0 25 25" role="img" aria-label="QR code Pix fictício"></svg>
+            <div style="display: grid; gap: 10px; flex: 1; min-width: 200px"><p class="code" id="k-code"></p><button type="button" class="btn btn--ghost" id="k-copy">Copiar código</button><p class="small muted" id="k-copied" role="status"></p></div>
+          </div>
+          <div class="span2 is-hidden" id="k-card" style="display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr))">
+            <div class="field span2"><label for="k-cn">Número do cartão (teste)</label><input id="k-cn" inputmode="numeric" placeholder="4242 4242 4242 4242" /></div>
+            <div class="field"><label for="k-cv">Validade</label><input id="k-cv" placeholder="12/30" /></div>
+            <div class="field"><label for="k-cc">CVV</label><input id="k-cc" inputmode="numeric" placeholder="123" /></div>
+            <div class="field"><label for="k-ct">Nome no cartão</label><input id="k-ct" /></div>
+            <div class="field"><label for="k-px">Parcelas</label><select id="k-px"></select></div>
+          </div>
+        </fieldset>
+        <p class="small muted" id="k-tot"></p>
+        <p class="err" id="k-err" role="alert"></p>
+        <div class="btns" style="margin-top: 0"><button type="button" class="btn btn--ghost" id="k-back">Voltar</button><button type="submit" class="btn" id="k-next">Continuar</button></div>
+      </form>
+      <div class="ck__b is-hidden" id="k-done">
+        <p class="eyebrow">Pedido confirmado</p>
+        <h2 id="k-id"></h2>
+        <div class="card small" id="k-res"></div>
+        <p><b>Leve documento com foto na retirada.</b></p>
+        <a class="btn" id="k-wa" target="_blank" rel="noopener">Receber confirmação no WhatsApp</a>
+      </div>
+    </dialog>
+
+    <a class="wa" href="https://wa.me/5511976959318" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.03c-.24.68-1.4 1.3-1.93 1.35-.53.05-1.02.24-2.9-.57-2.27-.98-3.71-3.33-3.82-3.48-.11-.16-.91-1.27-.88-2.4.03-1.14.63-1.69.85-1.93.22-.24.48-.29.64-.29.16 0 .32 0 .46.01.15.01.35-.06.54.43.19.49.65 1.69.71 1.81.06.12.1.26.02.42-.08.16-.15.26-.29.41-.14.15-.3.33-.43.45-.14.13-.29.27-.14.53.15.26.67 1.12 1.44 1.81.98.89 1.8 1.16 2.06 1.29.26.13.41.11.57-.05.16-.16.69-.77.87-1.04.18-.26.37-.21.61-.12.24.09 1.52.74 1.78.87.26.13.44.2.5.31.06.11.06.64-.18 1.26z"/></svg>
+    </a>
+
+    <footer class="site">
+      <div class="wrap foot">
+        <div>
+          <h3>Regina Decorações</h3>
+          <p class="small">Decorações completas para festas em Santo André e Grande ABC, desde 1999.</p>
+        </div>
+        <div>
+          <h3>Contato</h3>
+          <p class="small"><a href="https://wa.me/5511976959318" target="_blank" rel="noopener">WhatsApp (11) 97695-9318</a></p>
+          <p class="small"><a href="https://instagram.com/1reginadecoracoes" target="_blank" rel="noopener">Instagram @1reginadecoracoes</a></p>
+        </div>
+        <div>
+          <h3>Aviso</h3>
+          <p class="small">Fotos ilustrativas.</p>
+          <p class="small">CNPJ 22.309.338/0001-62</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      /* dados */
+      var CORES = [
+        { id: "verde", nome: "Verde & dourado", sw: "sw-verde" },
+        { id: "branco", nome: "Branco & creme", sw: "sw-branco" },
+        { id: "rosa", nome: "Rosa & terracota", sw: "sw-rosa" },
+        { id: "colorido", nome: "Colorido", sw: "sw-color" },
+        { id: "lilas", nome: "Lilás & azul", sw: "sw-lilas" },
+        { id: "rosazul", nome: "Rosa & azul", sw: "sw-rosazul" },
+        { id: "lilagua", nome: "Lilás & verde-água", sw: "sw-lilagua" },
+        { id: "dourado", nome: "Dourado & branco", sw: "sw-dourado" },
+        { id: "neutro", nome: "Bege & sálvia", sw: "sw-neutro" }
+      ];
+      var GRUPOS = [
+        { id: "infantil", nome: "Infantil temático" },
+        { id: "revelacao", nome: "Chá revelação" },
+        { id: "bebe", nome: "Chá de bebê" },
+        { id: "casamento", nome: "Casamento" },
+        { id: "adulto", nome: "Aniversário adulto" },
+        { id: "tematica", nome: "Temáticas" }
+      ];
+      var cor = function (id) { for (var i = 0; i < CORES.length; i++) if (CORES[i].id === id) return CORES[i]; return { nome: id, sw: "" }; };
+      var $ = function (s, r) { return (r || document).querySelector(s); };
+      var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+
+      /* favicon */
+      var favEl = document.getElementById("fav"), favApple = document.getElementById("fav-apple");
+      var FAV_CEL = favEl.getAttribute("href");
+      var FAV_REG = document.getElementById("fav-reg-src").getAttribute("src");
+      var FAV_REG_APPLE = document.getElementById("fav-reg-apple-src").getAttribute("src");
+      function setFav(cel) {
+        favEl.setAttribute("type", cel ? "image/png" : "image/svg+xml");
+        favEl.setAttribute("href", cel ? FAV_CEL : FAV_REG);
+        favApple.setAttribute("href", cel ? FAV_CEL : FAV_REG_APPLE);
+      }
+      setFav(document.body.classList.contains("is-celevia"));
+
+      /* tabs */
+      var tabs = [].slice.call(document.querySelectorAll('[role="tab"]'));
+      function showTab(key) {
+        tabs.forEach(function (t) {
+          var on = t.id === "t-" + key;
+          t.setAttribute("aria-selected", on ? "true" : "false");
+          document.getElementById(t.getAttribute("aria-controls")).classList.toggle("is-on", on);
+        });
+        document.body.classList.toggle("is-celevia", key === "celevia");
+        setFav(key === "celevia");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+      tabs.forEach(function (t) { t.addEventListener("click", function () { showTab(t.id.slice(2)); }); });
+      [].slice.call(document.querySelectorAll("[data-go]")).forEach(function (a) {
+        a.addEventListener("click", function (e) { e.preventDefault(); showTab(a.getAttribute("data-go")); });
+      });
+      var WA = "https://wa.me/5511976959318?text=";
+      function fmtData(v) { if (!v) return ""; var p = v.split("-"); return p[2] + "/" + p[1] + "/" + p[0]; }
+      function brl(n) { return "R$ " + n.toFixed(2).replace(".", ",").replace(/\B(?=(\d{3})+(?!\d))/g, "."); }
+      function tagHTML(id) { var c = cor(id); return '<span class="tag"><i class="' + c.sw + '"></i>' + c.nome + "</span>"; }
+
+      /* filtros genéricos */
+      function makeFilters(el, opts, label, onChange) {
+        var state = "";
+        el.innerHTML = '<button type="button" aria-pressed="true" data-v="">' + label + "</button>" +
+          opts.map(function (o) { return '<button type="button" aria-pressed="false" data-v="' + o.id + '">' + (o.sw ? '<i class="' + o.sw + '"></i>' : "") + o.nome + "</button>"; }).join("");
+        function set(v) {
+          state = v;
+          [].forEach.call(el.children, function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-v") === v ? "true" : "false"); });
+          onChange(v);
+        }
+        el.addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) set(b.getAttribute("data-v")); });
+        return { set: set, get: function () { return state; } };
+      }
+
+      /* festas */
+      var fc = $("#festa-cards"), fGrp, fCor;
+      function applyFestas() {
+        var g = fGrp ? fGrp.get() : "", c = fCor ? fCor.get() : "", any = false;
+        [].forEach.call(fc.querySelectorAll(".x-fgroup"), function (grp) {
+          var n = 0, gOk = !g || grp.getAttribute("data-grupo") === g;
+          [].forEach.call(grp.querySelectorAll(".festa"), function (card) {
+            var ok = gOk && (!c || card.getAttribute("data-cores").split(" ").indexOf(c) >= 0);
+            card.classList.toggle("is-hidden", !ok); if (ok) n++;
+          });
+          grp.classList.toggle("is-hidden", !n); if (n) any = true;
+        });
+        $("#festa-vazio").classList.toggle("is-hidden", any);
+      }
+      fGrp = makeFilters($("#festa-grupos"), GRUPOS, "Todos os grupos", applyFestas);
+      fCor = makeFilters($("#festa-filters"), CORES, "Todas as cores", applyFestas);
+
+      /* galeria: pastas */
+      var gv = $("#gal-view"), gfold = $("#gal-folders");
+      [].forEach.call(gfold.children, function (f) {
+        var n = gv.querySelectorAll('.gal[data-folder="' + f.getAttribute("data-folder") + '"] button').length;
+        f.querySelector("[data-count]").textContent = n + (n === 1 ? " foto" : " fotos");
+        f.setAttribute("aria-label", "Abrir pasta " + f.querySelector(".festa__t").textContent + ", " + n + " fotos");
+      });
+      function openFolder(id) {
+        var grid = gv.querySelector('.gal[data-folder="' + id + '"]'); if (!grid) return;
+        [].forEach.call(gv.querySelectorAll(".gal"), function (g) { g.classList.toggle("is-hidden", g !== grid); });
+        $("#gal-title").textContent = grid.getAttribute("data-nome");
+        gfold.classList.add("is-hidden"); gv.classList.remove("is-hidden");
+      }
+      function closeFolder() { gv.classList.add("is-hidden"); gfold.classList.remove("is-hidden"); }
+      gfold.addEventListener("click", function (e) {
+        var b = e.target.closest("[data-folder]"); if (!b) return;
+        openFolder(b.getAttribute("data-folder")); $("#gal-title").focus({ preventScroll: true });
+      });
+      $("#gal-back").addEventListener("click", function () { closeFolder(); var f = gfold.querySelector("button"); if (f) f.focus({ preventScroll: true }); });
+      fc.addEventListener("click", function (e) {
+        var b = e.target.closest(".festa"); if (!b) return;
+        openFolder(b.getAttribute("data-folder")); showTab("galeria");
+      });
+      tabs.forEach(function (t) { if (t.id === "t-galeria") t.addEventListener("click", closeFolder); });
+      var lb = $("#lb");
+      gv.addEventListener("click", function (e) {
+        var b = e.target.closest(".gal button"); if (!b) return;
+        var box = $("#lb-img"); box.innerHTML = ""; box.appendChild(b.querySelector("img").cloneNode());
+        $("#lb-cap").textContent = b.closest(".gal").getAttribute("data-nome") + " · " + b.getAttribute("data-cap") + " · foto ilustrativa";
+        lb.showModal();
+      });
+      [].forEach.call(gv.querySelectorAll(".gal button"), function (b) { b.setAttribute("aria-label", "Ampliar foto: " + b.getAttribute("data-cap")); });
+      document.body.appendChild(lb);
+      $("#ctr-sheet").addEventListener("click", function () {
+        var box = $("#lb-img"), im = this.querySelector("img").cloneNode();
+        im.removeAttribute("width"); im.removeAttribute("height"); im.style.maxWidth = "100%";
+        box.innerHTML = ""; box.appendChild(im);
+        $("#lb-cap").textContent = "Contrato de locação · dados de cliente fictícios";
+        lb.showModal();
+      });
+      $("#lb-close").addEventListener("click", function () { lb.close(); });
+      lb.addEventListener("click", function (e) { if (e.target === lb) lb.close(); });
+
+      /* orçamento */
+      function msgOrc(p) {
+        var v = function (id) { return $("#" + p + id).value.trim() || "a definir"; };
+        var d = $("#" + p + "data").value;
+        return "Olá, Regina! Gostaria de um orçamento.\n\n" +
+          "Nome: " + v("nome") + "\nTipo de festa: " + v("tipo") + "\nData: " + (d ? fmtData(d) : "a definir") +
+          "\nCidade: " + v("cidade") + "\nConvidados: " + v("conv") + "\nTema e cores: " + v("tema") + "\nFaixa de investimento: " + v("faixa");
+      }
+      [["#orc", "o-"], ["#orc2", "oc-"]].forEach(function (f) {
+        $(f[0]).addEventListener("submit", function (e) {
+          e.preventDefault();
+          window.open(WA + encodeURIComponent(msgOrc(f[1])), "_blank", "noopener");
+        });
+      });
+
+      /* celevia */
+      var CK = { aniv: { n: "Kit Aniversário Oliva", p: 189, c: 100 }, cha: { n: "Kit Chá Delicado", p: 169, c: 100 }, brunch: { n: "Kit Mesa Posta Brunch", p: 149, c: 80 }, jantar: { n: "Kit Jantar Romântico", p: 129, c: 80 },
+        supla: { n: "Suplá espelhado 30 cm", p: 6, c: 0 }, cil: { n: "Cilindro decorativo", p: 35, c: 0 }, arr: { n: "Arranjo de mesa", p: 25, c: 0 } };
+      var cart = {}, cdate = "", cupom = false, $$ = function (s) { return [].slice.call(document.querySelectorAll(s)); };
+      var WD = ["dom", "seg", "ter", "qua", "qui", "sex", "sáb"];
+      function dd(n) { var d = new Date(cdate + "T12:00:00"); d.setDate(d.getDate() + n); return d; }
+      function fd(d) { return WD[d.getDay()] + ", " + ("0" + d.getDate()).slice(-2) + "/" + ("0" + (d.getMonth() + 1)).slice(-2) + "/" + d.getFullYear(); }
+      function sums() { var s = 0, c = 0; Object.keys(cart).forEach(function (k) { s += CK[k].p * cart[k]; c += CK[k].c * cart[k]; }); var d = cupom ? s * 0.1 : 0; return { s: s, c: c, d: d, t: s - d + c }; }
+      function itens() { return Object.keys(cart).map(function (k) { return cart[k] + " × " + CK[k].n + " = " + brl(CK[k].p * cart[k]); }); }
+      var hoje = new Date().toISOString().slice(0, 10);
+      function cRender() {
+        var sat = !!cdate && dd(0).getDay() === 6, ret = cdate ? fd(dd(-1)) : "", dev = cdate ? fd(dd(1)) : "";
+        if (sat) delete cart.aniv;
+        $$("[data-date]").forEach(function (i) { i.value = cdate; i.min = hoje; });
+        $("#c-ret").textContent = "Retirada (véspera): " + (ret || "escolha a data");
+        $("#c-dev").textContent = "Devolução (dia seguinte): " + (dev || "escolha a data");
+        $("#d-dates").textContent = cdate ? "Retirada " + ret + " · Devolução " + dev : "Escolha a data para ver retirada e devolução.";
+        $("#kit-aniv").classList.toggle("is-na", sat); $("#na-aniv").classList.toggle("is-hidden", !sat);
+        $$("[data-add]").forEach(function (b) { var id = b.getAttribute("data-add"), na = sat && id === "aniv"; b.disabled = na; b.textContent = na ? "Indisponível nesta data" : cart[id] ? "No carrinho ✓" : "Adicionar"; });
+        $$("[data-q]").forEach(function (o) { o.textContent = cart[o.getAttribute("data-q")] || 0; });
+        var n = Object.keys(cart).reduce(function (a, k) { return a + cart[k]; }, 0);
+        $("#cart-n").textContent = n; $("#cart-btn").setAttribute("aria-label", "Abrir carrinho, " + n + " itens");
+        $("#d-list").innerHTML = n ? Object.keys(cart).map(function (k) {
+          return '<div class="ln"><span>' + CK[k].n + '<br><span class="muted small">' + cart[k] + " × " + brl(CK[k].p) + (CK[k].c ? " · caução " + brl(CK[k].c) : "") + "</span></span><b>" + brl(CK[k].p * cart[k]) + '</b><button type="button" class="x" data-rm="' + k + '" aria-label="Remover ' + CK[k].n + '">×</button></div>';
+        }).join("") : '<p class="muted" style="padding: 14px 0">Seu carrinho está vazio.</p>';
+        var m = sums();
+        $("#d-sub").textContent = brl(m.s); $("#d-desc").textContent = "− " + brl(m.d); $("#d-cau").textContent = brl(m.c); $("#d-tot").textContent = brl(m.t);
+        $$(".d-off").forEach(function (e) { e.classList.toggle("is-hidden", !cupom); });
+        $("#k-dts").textContent = "Retirada " + ret + " · Devolução " + dev;
+        $("#k-tot").textContent = "Total: " + brl(m.t) + " (inclui caução reembolsável de " + brl(m.c) + ")";
+        $("#k-px").innerHTML = [1, 2, 3].map(function (x) { return "<option>" + x + "x de " + brl(m.t / x) + " sem juros</option>"; }).join("");
+      }
+      var catF = makeFilters($("#kit-filters"), [{ id: "aniv", nome: "Aniversário" }, { id: "cha", nome: "Chá de bebê" }, { id: "brunch", nome: "Mesa posta & brunch" }, { id: "jantar", nome: "Jantar romântico" }], "Todos", function (v) {
+        $$("#kit-cards .kit").forEach(function (k) { k.classList.toggle("is-hidden", !!v && k.getAttribute("data-cat") !== v); });
+      });
+      $("#na-aniv a").addEventListener("click", function () { catF.set("cha"); });
+      $$("[data-date]").forEach(function (i) { i.addEventListener("change", function () { cdate = i.value; $("#d-err").textContent = ""; cRender(); }); });
+      var dr = $("#dr"), ck = $("#ck");
+      $("#p-celevia").addEventListener("click", function (e) {
+        var a = e.target.closest("[data-add]"), b = e.target.closest("[data-inc]");
+        if (a) { cart[a.getAttribute("data-add")] = 1; cRender(); dr.showModal(); }
+        if (b) { var k = b.getAttribute("data-inc"), q = Math.max(0, (cart[k] || 0) + +b.getAttribute("data-d")); if (q) cart[k] = q; else delete cart[k]; cRender(); }
+      });
+      $("#d-list").addEventListener("click", function (e) { var b = e.target.closest("[data-rm]"); if (b) { delete cart[b.getAttribute("data-rm")]; cRender(); } });
+      $("#cart-btn").addEventListener("click", function () { dr.showModal(); });
+      [dr, ck].forEach(function (d) {
+        d.addEventListener("click", function (e) { if (e.target === d || e.target.closest("[data-close]")) d.close(); });
+      });
+      $("#d-cup-ok").addEventListener("click", function () {
+        cupom = $("#d-cup").value.trim().toUpperCase() === "CELEVIA10";
+        $("#d-cup-msg").textContent = cupom ? "Cupom aplicado: 10% off no aluguel." : "Cupom inválido.";
+        cRender();
+      });
+      $("#d-go").addEventListener("click", function () {
+        var err = !Object.keys(cart).length ? "Adicione ao menos um item." : !cdate ? "Escolha a data da festa antes de finalizar." : "";
+        $("#d-err").textContent = err;
+        if (err) { if (cart && !cdate && Object.keys(cart).length) $("#d-date").focus(); return; }
+        dr.close(); go(1); $("#ck-f").classList.remove("is-hidden"); $("#k-done").classList.add("is-hidden"); ck.showModal();
+      });
+
+      /* checkout */
+      var step = 1, PIX = "00020126580014BR.GOV.BCB.PIX0136celevia-prototipo-" + Math.random().toString(36).slice(2, 10) + "5204000053039865802BR5925CELEVIA BY REGINA6011SANTO ANDRE6304ABCD";
+      $("#k-code").textContent = PIX;
+      (function () {
+        var r = "", fin = function (x, y) { return '<path d="M' + x + " " + y + 'h7v7h-7zM' + (x + 1) + " " + (y + 1) + 'v5h5v-5zM' + (x + 2) + " " + (y + 2) + 'h3v3h-3z" fill-rule="evenodd"/>'; };
+        for (var y = 0; y < 25; y++) for (var x = 0; x < 25; x++) if (!((x < 8 && y < 8) || (x > 16 && y < 8) || (x < 8 && y > 16)) && Math.random() < 0.48) r += "M" + x + " " + y + "h1v1h-1z";
+        $("#k-qr").innerHTML = '<g fill="#1c1c1c"><path d="' + r + '"/>' + fin(0, 0) + fin(18, 0) + fin(0, 18) + "</g>";
+      })();
+      $("#k-copy").addEventListener("click", function () {
+        (navigator.clipboard ? navigator.clipboard.writeText(PIX) : Promise.reject()).then(function () { $("#k-copied").textContent = "Código copiado."; }, function () { $("#k-copied").textContent = "Selecione o código acima para copiar."; });
+      });
+      function pg() { return $('input[name="pg"]:checked').value; }
+      $("#ck-f").addEventListener("change", function (e) { if (e.target.name === "pg") { $("#k-pix").classList.toggle("is-hidden", pg() !== "Pix"); $("#k-card").classList.toggle("is-hidden", pg() === "Pix"); } });
+      function go(s) {
+        step = s;
+        $$("#ck-f fieldset").forEach(function (f) { f.classList.toggle("is-hidden", +f.getAttribute("data-step") !== s); });
+        $$(".stepper li").forEach(function (l, i) { if (i === s - 1) l.setAttribute("aria-current", "step"); else l.removeAttribute("aria-current"); });
+        $(".prog i").style.width = (s / 3) * 100 + "%"; $(".prog").setAttribute("aria-valuenow", s);
+        $("#k-back").classList.toggle("is-hidden", s === 1); $("#k-next").textContent = s === 3 ? "Confirmar e pagar" : "Continuar";
+        $("#k-err").textContent = "";
+      }
+      $("#k-back").addEventListener("click", function () { go(step - 1); });
+      function dig(id) { return $(id).value.replace(/\D/g, "").length; }
+      $("#ck-f").addEventListener("submit", function (e) {
+        e.preventDefault();
+        var f = [];
+        if (step === 1) {
+          if (!$("#k-nome").value.trim()) f.push("nome");
+          if (dig("#k-cpf") !== 11) f.push("CPF (11 dígitos)");
+          if (dig("#k-tel") < 10) f.push("WhatsApp com DDD");
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($("#k-mail").value.trim())) f.push("e-mail válido");
+        } else if (step === 2) { if (!$("#k-ok").checked) f.push("aceite dos termos"); }
+        else if (pg() === "Cartão") {
+          if (dig("#k-cn") < 16) f.push("número do cartão"); if (!/^\d{2}\/\d{2}$/.test($("#k-cv").value.trim())) f.push("validade (MM/AA)");
+          if (dig("#k-cc") < 3) f.push("CVV"); if (!$("#k-ct").value.trim()) f.push("nome no cartão");
+        }
+        if (f.length) { $("#k-err").textContent = "Confira: " + f.join(", ") + "."; return; }
+        if (step < 3) return go(step + 1);
+        var id = "CLV-" + (1000 + Math.floor(Math.random() * 9000)), m = sums(), ret = fd(dd(-1)) + " às " + $("#k-hr").value, dev = fd(dd(1)) + " às " + $("#k-hd").value;
+        var pag = pg() === "Pix" ? "Pix" : "Cartão, " + $("#k-px").value;
+        $("#k-id").textContent = "Pedido " + id;
+        $("#k-res").innerHTML = "<p><b>" + esc($("#k-nome").value.trim()) + "</b></p><p>" + itens().map(esc).join("<br>") + "</p><p>Retirada: " + ret + "<br>Devolução: " + dev + "<br>Local: Santo André/SP</p><p>Aluguel " + brl(m.s - m.d) + (cupom ? " (cupom CELEVIA10)" : "") + " + caução reembolsável " + brl(m.c) + "<br><b>Total " + brl(m.t) + "</b> · " + pag + "</p>";
+        var msg = ["Olá! Pedido Celevia " + id + " confirmado.", "", "Cliente: " + $("#k-nome").value.trim(), "Festa: " + fd(dd(0)), "Retirada: " + ret, "Devolução: " + dev, "", "Itens:"].concat(itens().map(function (s) { return "- " + s; }),
+          ["", "Aluguel: " + brl(m.s - m.d) + (cupom ? " (cupom CELEVIA10)" : ""), "Caução reembolsável: " + brl(m.c), "Total: " + brl(m.t), "Pagamento: " + pag]).join("\n");
+        $("#k-wa").href = WA + encodeURIComponent(msg);
+        $("#ck-f").classList.add("is-hidden"); $("#k-done").classList.remove("is-hidden"); $(".prog i").style.width = "100%";
+        cart = {}; cupom = false; $("#d-cup").value = ""; $("#d-cup-msg").textContent = ""; cRender();
+      });
+      cRender();
+
+      /* movimento: revelar ao rolar + parallax suave */
+      (function () {
+        var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (reduce || !("IntersectionObserver" in window)) return;
+        document.body.classList.add("x-motion");
+        var io = new IntersectionObserver(function (es) {
+          es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } });
+        }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+        [].forEach.call(document.querySelectorAll(".rv"), function (el) { io.observe(el); });
+        var par = [].slice.call(document.querySelectorAll("[data-par]")), tick = false;
+        function frame() {
+          tick = false;
+          var vh = window.innerHeight;
+          par.forEach(function (el) {
+            var r = el.getBoundingClientRect();
+            if (!r.height || r.bottom < -100 || r.top > vh + 100) return;
+            var f = parseFloat(el.getAttribute("data-par"));
+            var off = f > 0 ? window.scrollY * f : (r.top + r.height / 2 - vh / 2) * f;
+            el.style.transform = "translate3d(0," + off.toFixed(1) + "px,0)";
+          });
+        }
+        function req() { if (!tick) { tick = true; requestAnimationFrame(frame); } }
+        window.addEventListener("scroll", req, { passive: true });
+        window.addEventListener("resize", req);
+        tabs.forEach(function (t) { t.addEventListener("click", function () { setTimeout(req, 50); }); });
+        frame();
+      })();
+    </script>
+  </body>
+</html>
