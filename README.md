@@ -8,7 +8,7 @@ Case de portfólio de **Nathália Nishimuta** (UX/UI e front-end).
 - Mostra festas por tipo (casamento, chás, infantil, temáticas e aniversário), com filtro por cor e galeria.
 - Tem um orçamento guiado que gera uma mensagem pronta para o WhatsApp.
 - Tem a aba Celevia, com a paleta da marca, catálogo de kits, carrinho e checkout rápido.
-- Simula um contrato digital preenchido ao vivo, que pode ser impresso em PDF.
+- Disponibiliza uma foto do contrato para credibilidade.
 
 ## Tecnologias
 HTML, CSS e JavaScript puros. É um site estático, sem build.
